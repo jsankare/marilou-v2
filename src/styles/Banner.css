@@ -1,0 +1,7 @@
+.mrl-banner {
+    color: black;
+    text-align: right;
+    padding: 32px;
+    border-bottom: solid 1px black;
+    justify-content: space-between;
+}
