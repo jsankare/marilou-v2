@@ -24,13 +24,13 @@
     opacity: 1;
 }
 
-.link_container:hover {
+/* .link_container:hover {
     opacity: 0.5;
 }
 
 .link_container a:hover  {
     opacity: 1;
-}
+} */
 
 a {
     font-size: 20px;
