@@ -6,7 +6,7 @@ function Banner() {
     return  (
         <div className='mrl-banner flex'>
             <img src={logo} alt="Marilou logo" className='mrl-logo'/>
-            <ul className='flex'>
+            <ul className='link_container flex'>
                 <li><a href="" onClick={test}>Accueil</a></li>
                 <li><a href="">Prestations</a></li>
                 <li><a href="">Contact</a></li>
