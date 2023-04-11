@@ -1,0 +1,41 @@
+.container {
+    background-color: #DDC6B8;
+    justify-content: space-between;
+}
+
+.content {
+    padding: 100px;
+    line-height: 75px;
+}
+
+h1, h2, h3 {
+    font-family: Dosis;
+}
+
+h1 {
+    font-size: 75px;
+    font-weight: 1000;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 750;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.cta_contact {
+    background-color: #F46F30;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 44px;
+    width: 160px;
+}
+
+img {
+    padding: 20px;
+}
