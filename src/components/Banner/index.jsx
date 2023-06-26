@@ -25,6 +25,7 @@ const LinkContainer = styled.ul`
 `;
 
 const Link = styled.a`
+  transition: 0.5s;
   text-decoration: none;
   color: black;
   margin: 0 5px;
@@ -33,7 +34,7 @@ const Link = styled.a`
   transition: 0.2s;
 
   &:hover {
-    color: #4FD6F4;
+    color: #538A82;
     font-weight: 800;
   }
 `;

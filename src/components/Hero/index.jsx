@@ -1,72 +1,45 @@
 import React from "react";
-import img from '../../assets/group.png';
 import styled from 'styled-components'
 
 const Container = styled.div`
-  background-color: #DDC6B8;
+  background-image: url('/images/dogs_near_water.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  filter: brightness(80%);
+  width: 100%;
+  height: 570px;
   justify-content: space-between;
   display: flex;
+  align-items: center;
 `;
 
 const Content = styled.div`
-  padding: 100px;
-  line-height: 75px;
-  max-width: 40%;
-`;
+  color: white;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: 5%;
+`
 
 const Title = styled.h1`
-  font-family: Dosis;
-  font-size: 75px;
-  font-weight: 1000;
-`;
+    font-size: 50px;
+    font-weight: bold;
+`
 
 const Subtitle = styled.h2`
-  font-family: Dosis;
-  font-size: 50px;
-  font-weight: 750;
-`;
-
-const Location = styled.h3`
-  font-family: Dosis;
-  font-size: 40px;
-  font-weight: 500;
-`;
-
-const ContactButton = styled.button`
-  background-color: #F46F30;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  height: 44px;
-  width: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 550;
-  transition: 0.2s;
-
-  &:hover {
-    filter: brightness(120%);
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-`;
-
-const HeroImage = styled.img`
-  padding: 20px;
-`;
+    font-size: 30px;
+`
 
 function Hero() {
     return (
       <Container>
         <Content>
-          <Title>Marilou</Title>
-          <Subtitle>Services de garde d'animaux de qualité pour votre tranquillité d'esprit</Subtitle>
-          <Location>Seine et Marne</Location>
-          <ContactButton>Me contacter<span className="material-icons">keyboard_arrow_right</span></ContactButton>
+            <Title>Garde animaux Seine-et-marne (77)</Title>
+            <Subtitle>Prenez soin de votre animal de compagnie en Seine-et-Marne avec Marilou - Services de garde d'animaux de qualité pour votre tranquillité d'esprit.</Subtitle>
         </Content>
-        <HeroImage src={img} alt="dog pic" />
       </Container>
     );
   }
