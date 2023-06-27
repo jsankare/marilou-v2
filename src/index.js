@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import Roboto from '@fontsource/roboto';
+// import Roboto from '@fontsource/roboto';
 import 'material-icons/iconfont/material-icons.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
