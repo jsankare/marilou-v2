@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/marilou-logo-cropped.png';
+import { Link } from 'react-router-dom';
 
 const BannerContainer = styled.div`
   color: black;
@@ -24,7 +25,7 @@ const LinkContainer = styled.ul`
   opacity: 1;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   transition: 0.5s;
   text-decoration: none;
   color: black;
@@ -35,23 +36,22 @@ const Link = styled.a`
 
   &:hover {
     color: #538A82;
-    font-weight: 800;
   }
 `;
 
 function Banner() {
     return (
       <BannerContainer>
-        <Logo src={logo} alt="Marilou logo" />
+        <StyledLink to="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
         <LinkContainer>
           <li>
-            <Link href="#">Accueil</Link>
+            <StyledLink to="/">Accueil</StyledLink>
           </li>
           <li>
-            <Link href="#">Prestations</Link>
+            <StyledLink to="/prestations">Prestations</StyledLink>
           </li>
           <li>
-            <Link href="#">Contact</Link>
+            <StyledLink to="/contact">Contact</StyledLink>
           </li>
         </LinkContainer>
       </BannerContainer>
