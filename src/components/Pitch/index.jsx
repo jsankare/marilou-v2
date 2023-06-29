@@ -41,19 +41,31 @@ const data = [
     },
 ]
 
-const Container = styled.section``
+const Container = styled.section`
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+`
 
-const Header = styled.div``
+const Header = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`
 
 const PitchCards = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 50px;
 `
 
 const Title = styled.h2`
     font-weight: 800;
-    font-size: 40px;
+    font-size: 48px;
 `
 
 const Subtitle = styled.p``

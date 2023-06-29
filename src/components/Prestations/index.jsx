@@ -34,10 +34,7 @@ const data = [
 ];
 
 const Container = styled.section `
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
+
 `
 
 

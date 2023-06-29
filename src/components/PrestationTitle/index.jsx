@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.section`
     position: relative;
+    width: 100%;
 `
 
 const Background = styled.img`
@@ -21,15 +22,16 @@ const TextWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 400px;
+    gap: 10px;
 `
 
 const Title = styled.h1`
     font-weight: 800;
-    font-size: 50px;
+    font-size: 52px;
 `
 
 const Subtext = styled.h2`
-    font-size: 20px;
+    font-size: 22px;
 `
 
 const PrestationTitle = () => {
