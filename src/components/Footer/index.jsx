@@ -9,6 +9,7 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 50px;
 `
 
 const Content = styled.div`
@@ -60,10 +61,14 @@ const StyledLink = styled(Link)`
 `
 
 const Dividor = styled.div`
-height: 1px;
-width: 90%;
-background-color: black;
-margin: 0 auto;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin: 0 auto;
+    @media (max-width:1250px) {
+        width: 90%;
+    }
+
 `
 
 

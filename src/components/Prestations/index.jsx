@@ -34,7 +34,13 @@ const data = [
 ];
 
 const Container = styled.section `
-
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 20px;
 `
 
 

@@ -10,13 +10,12 @@ const Container = styled.div `
     align-items: center;
     gap: 20px;
     width: 100%;
-    max-width: 650px;
+    max-width: 550px;
 `
 
 const Image = styled.img `
     width: 100%;
     height: 100%;
-    width: 650px;
     max-height: 320px;
     object-fit: cover;
 `
