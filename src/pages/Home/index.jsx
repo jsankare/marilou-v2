@@ -5,6 +5,7 @@ import Concept from '../../components/Concept';
 import Prestations from '../../components/Prestations';
 import AboutMe from "../../components/AboutMe";
 import Faq from "../../components/Faq";
+import Testimonial from "../../components/Testimonial";
 
 const Wrapper = styled.div `
   display: flex;
@@ -20,6 +21,7 @@ const Home = () => {
             <Concept />
             <Prestations />
             <AboutMe />
+            <Testimonial />
             <Faq />
         </Wrapper>
     );

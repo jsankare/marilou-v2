@@ -48,6 +48,9 @@ function Banner() {
             <StyledLink to="/">Accueil</StyledLink>
           </li>
           <li>
+            <StyledLink to="/values">Nos valeurs</StyledLink>
+          </li>
+          <li>
             <StyledLink to="/prestations">Prestations</StyledLink>
           </li>
           <li>

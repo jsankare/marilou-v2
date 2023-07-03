@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 import Header from '../../components/PrestationTitle'
-import Pitch from "../../components/Pitch";
 
 const Container = styled.section`
     display: flex;
@@ -13,8 +12,7 @@ const Container = styled.section`
 const Prestations = () => {
     return (
         <Container>
-            <Header />
-            <Pitch />
+            <Header image="/images/prestationsbackground.jpg" title="Promenades & visites" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
         </Container>
     );
 };

@@ -12,7 +12,7 @@ const Background = styled.img`
     object-fit: cover;
     position: absolute;
     z-index: -10;
-    filter: brightness(0.8);
+    filter: brightness(0.5);
 `
 
 const TextWrapper = styled.div`
@@ -34,13 +34,13 @@ const Subtext = styled.h2`
     font-size: 22px;
 `
 
-const PrestationTitle = () => {
+const PrestationTitle = ({ image, title, subtitle }) => {
     return (
         <Container>
-            <Background src="/images/prestationsbackground.jpg" />
+            <Background src={image} />
             <TextWrapper>
-                <Title>Promenades & visites</Title>
-                <Subtext>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </Subtext>
+                <Title> {title} </Title>
+                <Subtext> {subtitle} </Subtext>
             </TextWrapper>         
         </Container>
     );
