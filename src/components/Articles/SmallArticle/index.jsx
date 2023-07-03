@@ -23,21 +23,29 @@ const Background = styled.img`
     position: absolute;
     z-index: -1000;
     transition: transform 0.3s ease-in-out;
-    filter: brightness(0.7);
+    filter: brightness(0.6);
 `
 
 const Content = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
+    gap: 10px;
+    color: white;
 `
 
-const Title = styled.h3``
+const Title = styled.h3`
+    font-size: 26px;
+    font-weight: 600;
+`
 
 const Catchphrase = styled.p``
 
 const Link = styled.a`
     width: 100%;
+    color: white;
+    display: flex;
+    gap: 10px;
 `
 
 const SmallArticle = ( {image, title, catchphrase, link} ) => {
@@ -47,7 +55,7 @@ const SmallArticle = ( {image, title, catchphrase, link} ) => {
             <Content>
             <Title> {title} </Title>
             <Catchphrase> {catchphrase} </Catchphrase>
-            <Link href={link} target="blank" > {link} <FontAwesomeIcon icon={faChevronRight} /> </Link>
+            <Link href={link} target="blank" > Lire l'article ici <FontAwesomeIcon icon={faChevronRight} /> </Link>
             </Content>
         </Container>
     );

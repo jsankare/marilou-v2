@@ -6,44 +6,59 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const Container = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: ${({ flexDirection }) => (flexDirection ? 'column' : 'row')};
+    flex-direction: ${({ flexColumn }) => (flexColumn ? 'column' : 'row')};
     gap: 20px;
     align-items: center;
     overflow: hidden;
-    &:hover {
-        ${Picture} {
-            transform: scale(1.2);
-        }
-    }
 `
 
-const PictureWrapper = styled.div``
+const PictureWrapper = styled.div`
+    width: 100%;
+    height: 200px;
+    max-width: ${({ flexColumn }) => (flexColumn ? '' : '350px')};
+    overflow: hidden;
+    position: relative;
+`
 
 const Picture = styled.img`
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    filter: brightness(0.7);
 `
 
-const Content = styled.div``
-
-const Title = styled.h3``
-
-const Catchphrase = styled.p`
-    
+const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 `
 
-const Link = styled.a``
+const Title = styled.h3`
+    font-size: 26px;
+    font-weight: 600;
+`
 
-const BigArticle = ( {image, title, catchphrase, link, flexDirection} ) => {
+const Catchphrase = styled.p``
+
+const Link = styled.a`
+    display: flex;
+    gap: 10px;
+    color: #478079;
+`
+
+const BigArticle = ({ image, title, catchphrase, link, flexColumn }) => {
     return (
-        <Container flexDirection={flexDirection} >
+        <Container flexColumn={flexColumn}>
             <PictureWrapper>
-                <Picture src={image} />
+                <Picture src={image} alt="Article Image" />
             </PictureWrapper>
             <Content>
-                <Title> {title} </Title>
-                <Catchphrase> {catchphrase} </Catchphrase>
-                <Link href={link} target="blank" > {link} <FontAwesomeIcon icon={faChevronRight} /> </Link>
+                <Title>{title}</Title>
+                <Catchphrase>{catchphrase}</Catchphrase>
+                <Link href={link} target="_blank" rel="noopener noreferrer">
+                   Lire l'article ici<FontAwesomeIcon icon={faChevronRight} />
+                </Link>
             </Content>
         </Container>
     );
