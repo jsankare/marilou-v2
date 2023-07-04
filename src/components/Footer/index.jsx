@@ -93,6 +93,7 @@ const Footer = () => {
                     <StyledLink to="/prestations" >Prestations</StyledLink>
                     <StyledLink to="/wellbeing" >Les bienfaits</StyledLink>
                     <StyledLink to="/contact" >Contact</StyledLink>
+                    <StyledLink to="/legal" >Conditions d'utilisation</StyledLink>
                 </Sitemap>
             </Content>
             <Dividor />

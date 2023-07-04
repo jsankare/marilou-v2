@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import Header from '../../components/PrestationTitle'
+import Header from '../../components/PageHero';
 
 const Container = styled.section`
     display: flex;
@@ -12,7 +12,7 @@ const Container = styled.section`
 const Prestations = () => {
     return (
         <Container>
-            <Header image="/images/prestationsbackground.jpg" title="Promenades & visites" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique." />
+            <Header image="/images/prestationsbackground.jpg" title="Promenades & visites" subtitle="La plus petite des bonnes actions envers un animal est un pas vers la construction d'un monde meilleur." author="Richard Carlson" />
         </Container>
     );
 };
