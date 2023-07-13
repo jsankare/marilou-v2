@@ -11,6 +11,7 @@ const Container = styled.div`
     width: 100%;
     height: 150px;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     &:hover {
         > img {
             transform: scale(1.2);

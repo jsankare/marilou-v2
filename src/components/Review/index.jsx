@@ -57,10 +57,9 @@ const Review = ({ reviews }) => {
   return (
     <ReviewContainer>
       <Title>Les avis des clients</Title>
-      <ReviewContent>{review.quote}</ReviewContent>
+      <ReviewContent>"{review.quote}"</ReviewContent>
       <ReviewAuthor>
-        <div>{review.name}</div>
-        <div>{review.title}</div>
+        <div>- {review.name}</div>
       </ReviewAuthor>
       <Controls>
         <PreviousButton

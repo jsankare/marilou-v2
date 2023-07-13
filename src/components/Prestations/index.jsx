@@ -29,13 +29,14 @@ const data = [
         image: '/images/dogWell.jpg',
         title: `Bien être animal`,
         description: `Découvrez en quoi nos services rendent la vie de votre animal meilleure. Offrez-leur l'amour, l'attention et les soins qu'ils méritent, même lorsque vous êtes absents.`,
-        path: `/wellbeing`
+        path: `/values`
     }
 ];
 
 const Container = styled.section `
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
+    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

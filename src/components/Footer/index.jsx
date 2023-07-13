@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const Container = styled.section`
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
+    padding: 0 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -46,7 +47,7 @@ const Logo = styled.img`
 const Sitemap = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 `
 
 const Rights = styled.div``
@@ -58,6 +59,7 @@ const Maker = styled.p`
 
 const StyledLink = styled(Link)`
     text-decoration: none;
+    color: black;
 `
 
 const Dividor = styled.div`
@@ -91,7 +93,7 @@ const Footer = () => {
                 <Sitemap>
                     <StyledLink to="/" >Accueil</StyledLink>
                     <StyledLink to="/prestations" >Prestations</StyledLink>
-                    <StyledLink to="/wellbeing" >Les bienfaits</StyledLink>
+                    <StyledLink to="/values" >Nos valeurs</StyledLink>
                     <StyledLink to="/contact" >Contact</StyledLink>
                     <StyledLink to="/legal" >Conditions d'utilisation</StyledLink>
                 </Sitemap>

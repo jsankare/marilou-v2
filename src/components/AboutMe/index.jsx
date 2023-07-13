@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const Container = styled.section`
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
+    padding: 0 20px;
     align-items: center;
     margin: 0;
     gap: 50px;

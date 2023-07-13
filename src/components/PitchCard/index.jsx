@@ -19,7 +19,9 @@ const Title = styled.h3`
     font-size: 28px;
 `
 
-const Description = styled.p``
+const Description = styled.p`
+    font-size: 18px;
+`
 
 const PitchCard = ({image, title, description}) => {
     return (

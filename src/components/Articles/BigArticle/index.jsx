@@ -10,6 +10,7 @@ const Container = styled.div`
     gap: 20px;
     align-items: center;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 
 const PictureWrapper = styled.div`
@@ -32,6 +33,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
 `
 
 const Title = styled.h3`

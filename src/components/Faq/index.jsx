@@ -37,8 +37,10 @@ const data = [
 
 const Container = styled.section`
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
+    padding: 0 20px;
     display: flex;
+    gap: 50px;
 `
 
 const Divider = styled.div`
@@ -59,7 +61,10 @@ const FaqTitle = styled.h3`
     font-weight: 800;
 `
 
-const FaQText = styled.p``
+const FaQText = styled.p`
+    font-size: 18px;
+    width: 100%;
+`
 
 const Questions = styled.div`
     display: flex;
@@ -73,7 +78,7 @@ const Faq = () => {
         <Container>
             <Heading>
                 <FaqTitle>FAQs</FaqTitle>
-                <FaQText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</FaQText>
+                <FaQText>Des réponses détaillées aux questions les plus fréquemment posées : Trouvez ici l'aide dont vous avez besoin.</FaQText>
             </Heading>
             <Questions>
             <Divider />

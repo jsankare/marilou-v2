@@ -5,24 +5,26 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 10px;
     width: 100%;
-    max-width: 250px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: 10px;
     margin: 10px;
+    gap: 20px;
 `
 
 const Image = styled.img`
-
+    filter: drop-shadow(5px 3px 3px #000000);
 `
 
 const Title = styled.h3`
-
+    font-size: 24px;
+    font-weight: 700;
 `
 
-const Subtitle = styled.h3`
+const Subtitle = styled.p`
     text-align: center;
+    font-size: 18px;
 `
 
 const ConceptCard = ({image, title, subtitle}) => {

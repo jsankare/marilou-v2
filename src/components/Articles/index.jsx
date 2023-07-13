@@ -7,7 +7,8 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
+    padding: 0 20px;
     gap: 20px;
 `
 
@@ -36,20 +37,21 @@ const SmallWrapper = styled.div`
     display: flex;
     flex: 70%;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `
 
 
 const Articles = () => {
     return (
         <Container>
-            <Title>Des articles interessants ici</Title>
+            <Title>Les actualités animales</Title>
             <Wrapper>
             <BigWrapper>
                 <Duo>
                     <SmallArticle  
                     image="/images/beautiful-cat-portrait-close-up.jpg"
                     title="Le chat aussi a des besoins" 
-                    catchphrase="lorem ipsm dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus." 
+                    catchphrase="" 
                     link="https://www.google.com"
                     />
                     <SmallArticle  
