@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import PitchCard from "../PitchCard";
+import PitchCard from "./PitchCard";
 
 const data = [
     {

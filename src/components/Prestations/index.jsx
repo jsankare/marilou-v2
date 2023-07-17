@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import PrestationCard from "../PrestationCard";
+import PrestationCard from "./PrestationCard";
 
 const data = [
     {
