@@ -54,7 +54,10 @@ function Banner() {
             <StyledLink to="/prestations">Prestations</StyledLink>
           </li>
           <li>
-            <StyledLink to="/contact">Contact</StyledLink>
+            <StyledLink to="/#contact">Contact</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/estimate">Devis</StyledLink>
           </li>
         </LinkContainer>
       </BannerContainer>

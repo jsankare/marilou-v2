@@ -15,6 +15,10 @@ const Container = styled.div`
 
 const Image = styled.img`
     filter: drop-shadow(5px 3px 3px #000000);
+    transition: 0.2s ease-in-out;
+    &&:hover {
+        transform: scale(1.1);
+    }
 `
 
 const Title = styled.h3`

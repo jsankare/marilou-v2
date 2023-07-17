@@ -4,8 +4,9 @@ import Hero from '../../components/Hero';
 import Concept from '../../components/Concept';
 import Prestations from '../../components/Prestations';
 import AboutMe from "../../components/AboutMe";
-import Faq from "../../components/Faq";
 import Testimonial from "../../components/Testimonial";
+import Faq from "../../components/Faq";
+import ContactForm from "../../components/Form/Contact";
 
 const Wrapper = styled.div `
   display: flex;
@@ -23,6 +24,7 @@ const Home = () => {
             <AboutMe />
             <Testimonial />
             <Faq />
+            <ContactForm />
         </Wrapper>
     );
 };

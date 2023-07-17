@@ -94,7 +94,7 @@ const Footer = () => {
                     <StyledLink to="/" >Accueil</StyledLink>
                     <StyledLink to="/prestations" >Prestations</StyledLink>
                     <StyledLink to="/values" >Nos valeurs</StyledLink>
-                    <StyledLink to="/contact" >Contact</StyledLink>
+                    <StyledLink to="/estimate" >Devis</StyledLink>
                     <StyledLink to="/legal" >Conditions d'utilisation</StyledLink>
                 </Sitemap>
             </Content>
