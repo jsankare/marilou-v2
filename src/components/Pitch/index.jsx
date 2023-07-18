@@ -65,8 +65,9 @@ const PitchCards = styled.div`
 `
 
 const Title = styled.h2`
-    font-weight: 800;
-    font-size: 48px;
+    font-size: 30px;
+    color: #538A82;
+    font-weight: bold;
 `
 
 const Subtitle = styled.p``

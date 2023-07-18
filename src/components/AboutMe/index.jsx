@@ -23,8 +23,9 @@ const Content = styled.div`
 `
 
 const Title = styled.h2`
-    font-weight: 800;
-    font-size: 24px;
+    font-size: 30px;
+    color: #538A82;
+    font-weight: bold;
 `
 
 const Description = styled.p``

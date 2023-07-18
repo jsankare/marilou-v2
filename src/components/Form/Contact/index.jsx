@@ -4,6 +4,15 @@ import Input from "../Input";
 
 const data = [
     {
+        name: "civil",
+        placeholder: "Choisissez",
+        type: "radio",
+        label: "Civilité",
+        anchor: "civil",
+        options: ["Monsieur", "Madame", "Ne se prononce pas"],
+        id: 1,
+    },
+    {
         name: "name",
         placeholder: "Yannick",
         type: "text",
@@ -36,29 +45,14 @@ const data = [
         id: 4,
     },
     {
-        name: "reason",
-        placeholder: "",
-        type: "text-area",
-        label: "text",
-        anchor: "reason",
-        id: 5,
-    },
-    {
-        name: "Liste",
+        name: "list",
+        placeholder: "Selectionnez ici",
         type: "select",
-        label: "Select Input",
-        anchor: "select",
+        label: "La raison de votre message",
+        anchor: "list",
         id: 6,
-        options: ["Option 1", "Option 2", "Option 3"],
+        options: ["Demande d'information", "Erreur sur le site", "Avis de client"],
       },
-      {
-        name: "radioInput",
-        type: "radio",
-        label: "Radio Input",
-        anchor: "radio",
-        id: 7,
-        options: ["Option 1", "Option 2", "Option 3", "Option 4", "Option 2", "Option 3", "Option 4"],
-      }
 ]
 
 const Container = styled.section`
@@ -84,16 +78,23 @@ const Wrapper = styled.form`
     max-width: 800px;
 `
 
-const Title = styled.h3``
+const ConfirmWrapper = styled.div``
 
-const Subtext = styled.h4``
+const Title = styled.h2`
+    font-size: 30px;
+    color: #538A82;
+    font-weight: bold;
+`
+
+const Validation = styled.input``
+
+const StyledSubmit = styled.input``
 
 const ContactForm = () => {
     return (
         <Container>
             <Heading>
                 <Title>Me contacter</Title>
-                <Subtext>Sous-text</Subtext>
             </Heading>
             <Wrapper>
                 {data.map((input) => (
@@ -108,6 +109,10 @@ const ContactForm = () => {
                     />
                 ))}
             </Wrapper>
+            <ConfirmWrapper>
+                <Validation type="checkbox" label="test" />
+                <StyledSubmit type="submit" value="Envoyer" />
+            </ConfirmWrapper>
         </Container>
     );
 };

@@ -14,8 +14,9 @@ const ReviewContainer = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 30px;
-  font-weight: 800;
+    font-size: 30px;
+    color: #538A82;
+    font-weight: bold;
 `
 
 const ReviewContent = styled.div`

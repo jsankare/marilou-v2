@@ -18,8 +18,9 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h2`
-    font-size: 48px;
-    font-weight: 800;
+    font-size: 30px;
+    color: #538A82;
+    font-weight: bold;
 `
 
 const BigWrapper = styled.div`

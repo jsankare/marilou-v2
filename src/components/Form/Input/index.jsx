@@ -4,22 +4,26 @@ import styled from "styled-components";
 const Container = styled.section`
     display: flex;
     flex-direction: column;
-    gap: 5px;
-`;
-
-const StyledInput = styled.input``;
-
-const StyledLabel = styled.label``;
-
-const StyledTextarea = styled.textarea``;
-
-const StyledSelect = styled.select``;
-
-const StyledRadioWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
     gap: 15px;
 `;
+
+const StyledInput = styled.input`
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+`
+
+const StyledLabel = styled.label``
+
+const StyledTextarea = styled.textarea``
+
+const StyledSelect = styled.select``
+
+const StyledRadioWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+`
 
 const Input = ({ name, placeholder, type, label, anchor, id, options }) => {
   return (
@@ -62,6 +66,7 @@ const Input = ({ name, placeholder, type, label, anchor, id, options }) => {
           id={id}
         />
       )}
+      
     </Container>
   );
 };
