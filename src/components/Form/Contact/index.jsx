@@ -1,59 +1,14 @@
 import React from "react";
 import styled from 'styled-components';
-import Input from "../Input";
+import TextInput from '../Inputs/Text';
+import SelectInput from '../Inputs/Select';
+import RadioInput from "../Inputs/Radio";
 
-const data = [
-    {
-        name: "civil",
-        placeholder: "Choisissez",
-        type: "radio",
-        label: "Civilité",
-        anchor: "civil",
-        options: ["Monsieur", "Madame", "Ne se prononce pas"],
-        id: 1,
-    },
-    {
-        name: "name",
-        placeholder: "Yannick",
-        type: "text",
-        label: "Prénom",
-        anchor: "name",
-        id: 1,
-    },
-    {
-        name: "surname",
-        placeholder: "Dupuis",
-        type: "text",
-        label: "Nom",
-        anchor: "surname",
-        id: 2,
-    },
-    {
-        name: "mail",
-        placeholder: "mon.adresse@mail.fr",
-        type: "email",
-        label: "Email",
-        anchor: "mail",
-        id: 3,
-    },
-    {
-        name: "phone",
-        placeholder: "0612131415",
-        type: "tel",
-        label: "Numéro de téléphone",
-        anchor: "phone",
-        id: 4,
-    },
-    {
-        name: "list",
-        placeholder: "Selectionnez ici",
-        type: "select",
-        label: "La raison de votre message",
-        anchor: "list",
-        id: 6,
-        options: ["Demande d'information", "Erreur sur le site", "Avis de client"],
-      },
-]
+const options = [
+    { value: "option1", label: "Option 1" },
+    { value: "option2", label: "Option 2" },
+    { value: "option3", label: "Option 3" },
+  ];
 
 const Container = styled.section`
     display: flex;
@@ -86,10 +41,6 @@ const Title = styled.h2`
     font-weight: bold;
 `
 
-const Validation = styled.input``
-
-const StyledSubmit = styled.input``
-
 const ContactForm = () => {
     return (
         <Container>
@@ -97,21 +48,13 @@ const ContactForm = () => {
                 <Title>Me contacter</Title>
             </Heading>
             <Wrapper>
-                {data.map((input) => (
-                    <Input 
-                        name={input.name}
-                        placeholder={input.placeholder}
-                        type={input.type}
-                        label={input.label}
-                        anchor={input.anchor}
-                        options={input.options}
-                        id={input.id}
-                    />
-                ))}
+                <TextInput label="Nom" placeholder="Martine" />
+                <TextInput label="Prénom" placeholder="Dupuis" />
+                <SelectInput label="Choisissez une option" name="options" placeholder="Choose one" options={options} />
+                <RadioInput label="Choisissez une option" name="options" placeholder="Choose one" options={options} />
             </Wrapper>
             <ConfirmWrapper>
-                <Validation type="checkbox" label="test" />
-                <StyledSubmit type="submit" value="Envoyer" />
+
             </ConfirmWrapper>
         </Container>
     );
