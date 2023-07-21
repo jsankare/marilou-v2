@@ -12,18 +12,20 @@ const StyledLabel = styled.label`
     font-size: 18px;
 `
 
-const StyledInput = styled.input`
-    padding: 5px;
+const StyledArea = styled.textarea`
     font-size: 18px;
+    padding: 10px;
+    min-height: 100px;
+    height: fit-content;
 `
 
-const Text = ({label, name, placeholder}) => {
+const TextArea = ({label, name, placeholder}) => {
     return (
         <Container>
             <StyledLabel  for={name} >{label}</StyledLabel>
-            <StyledInput type="text" id={name} name={name} placeholder={placeholder} />
+            <StyledArea id={name} name={name} placeholder={placeholder} />
         </Container>
     );
 };
 
-export default Text;
+export default TextArea;

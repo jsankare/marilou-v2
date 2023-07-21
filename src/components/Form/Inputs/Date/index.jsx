@@ -17,13 +17,13 @@ const StyledInput = styled.input`
     font-size: 18px;
 `
 
-const Text = ({label, name, placeholder}) => {
+const Date = ({label, name}) => {
     return (
         <Container>
             <StyledLabel  for={name} >{label}</StyledLabel>
-            <StyledInput type="text" id={name} name={name} placeholder={placeholder} />
+            <StyledInput type="date" id={name} name={name} />
         </Container>
     );
 };
 
-export default Text;
+export default Date;

@@ -21,6 +21,11 @@ const Testimonial = () => {
         name: `Adeline Colombier`,
         picture: ``,
     },
+    {
+      quote: `Excellente prestation. Marilou est une personne de confiance et sympathique, mon chien était très heureux, on recommande !`,
+      name: `Mme Delachanal`,
+      picture: ``,
+  },
   ];
 
   return (
