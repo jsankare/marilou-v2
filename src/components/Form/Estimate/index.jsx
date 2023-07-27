@@ -15,12 +15,25 @@ const status = [
 const race = [
     { value: "felids", label: "Chat" },
     { value: "canidae", label: "Chien" },
+    { value: "felicani", label: "Chien & chat" },
     { value: "equines", label: "Cheval ou âne" },
-    { value: "mustelids", label: "Furet ou putois (races domestiques)" },
-    { value: "rodents", label: "Souris, rat, hamster ou gerbille (races domestiques)" },
-    { value: "chinchillidae", label: "Chichilla (races domestiques)" },
-    { value: "cavileporides", label: "Cochon d'Inde ou lapin (races domestiques)" },
+    { value: "mustelids", label: "Furet ou putois" },
+    { value: "rodents", label: "Souris, rat, hamster ou gerbille" },
+    { value: "chinchillidae", label: "Chichilla" },
+    { value: "cavileporides", label: "Cochon d'Inde ou lapin" },
+    { value: "others", label: "Autre (précisez dans le message)" },
 ];
+
+const prestation = [
+    { value: "walk15", label: "Promenade - 15mn" },
+    { value: "walk30", label: "Promenade - 30mn" },
+    { value: "walk45", label: "Promenade - 45mn" },
+    { value: "walk60", label: "Promenade - 60mn" },
+    { value: "visit", label: "Visite" },
+    { value: "week1", label: "Forfait - 1 semaine" },
+    { value: "week2", label: "Forfait - 2 semaines" },
+    { value: "month", label: "Forfait - 1 mois" },
+]
 
 const Container = styled.section`
     display: flex;
@@ -93,9 +106,10 @@ const ContactForm = () => {
                 <RadioInput label="Vous êtes :" name="status" options={status} />
                 <NumberInput label="Nombre d'animaux à garder" name="number" placeholder="1, 5, 10 .." />
             </TwoGridWrapper>
-            <OneGridWrapper>
-                <SelectInput label="Le type d'animal que vous voulez faire garder (un ou plusieurs)" placeholder="Choisissez ici" name="race" options={race} />
-            </OneGridWrapper>
+            <TwoGridWrapper>
+                <SelectInput label="Le type d'animal concerné" placeholder="Choisissez ici" name="race" options={race} />
+                <SelectInput label="Votre prestation choisie" placeholder="Choisissez ici" name="prestation" options={prestation} />
+            </TwoGridWrapper>
             <TwoGridWrapper>
             <DateInput label="Date de début de garde" />
                 <DateInput label="Date de fin de garde" />
