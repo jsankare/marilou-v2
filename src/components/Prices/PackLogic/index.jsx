@@ -7,22 +7,27 @@ const Container = styled.div`
   flex-direction: column;
   gap: 50px;
   align-items: center;
-`;
+`
 
-const SelectWrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+`
 
 const Button = styled.a`
   cursor: pointer;
   padding: 10px;
   background-color: ${(props) => (props.active ? "#ccc" : "transparent")};
   border: ${(props) => (props.active ? "1px solid #000" : "none")};
-`;
+`
 
 const Title = styled.h2`
   font-size: 28px;
   color: #356d64;
   font-weight: bold;
-`;
+`
 
 const Variable = styled.div`
   display: flex;
@@ -38,7 +43,7 @@ const Variable = styled.div`
     background-color: ${(props) => (props.active ? "#ccc" : "transparent")};
     border: ${(props) => (props.active ? "1px solid #000" : "none")};
   }
-`;
+`
 
 const PackLogic = ({ packsData, title }) => {
   const [selectedPack, setSelectedPack] = useState(packsData[0].name);
@@ -76,7 +81,8 @@ const PackLogic = ({ packsData, title }) => {
   return (
     <Container>
       <Title> {title} </Title>
-      <SelectWrapper>
+      <Wrapper>
+      <Variable>
         {packsData.map((pack, index) => (
           <Button
             key={index}
@@ -86,7 +92,7 @@ const PackLogic = ({ packsData, title }) => {
             {pack.name}
           </Button>
         ))}
-      </SelectWrapper>
+      </Variable>
       {selectedPackData && (
         <>
         {selectedPackData.variable && (
@@ -133,6 +139,7 @@ const PackLogic = ({ packsData, title }) => {
           />
         </>
       )}
+      </Wrapper>
     </Container>
   );
 };
