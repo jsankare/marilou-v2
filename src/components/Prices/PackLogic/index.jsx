@@ -49,7 +49,7 @@ const PackLogic = ({ packsData, title }) => {
   const [selectedVariable, setSelectedVariable] = useState(null);
   const [selectedPet, setSelectedPet] = useState(null);
 
-  const [selectedPrice, setSelectedPrice] = useState(null);
+  const [, setSelectedPrice] = useState(null);
 
   useEffect(() => {
     if (selectedVariable !== null) {
