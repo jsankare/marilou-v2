@@ -16,17 +16,17 @@ const data = [
     {
         id: 'FM2I',
         question: `Quel type d'animal gardez-vous ?`,
-        answer: `Je peux garder tout type d'animal domestique. Si vous avez une demande spécifique, vous pouvez me joindre grâce au formulaire de contact situé en dessous.`
+        answer: `Je garde les chiens et les chats. Si vous avez une demande spécifique, vous pouvez me joindre grâce au formulaire de contact situé en dessous.`
     },
     {
         id: '7CN1',
         question: `Je dois réserver une visite et une promenade ?`,
-        answer: `Non, le prix des promenades est déjà inclus dans le tarif visites.`
+        answer: `Oui, les visites et les promenades sont deux prestations différentes.`
     },
     {
         id: '78E4',
         question: `Si j'ai trois chiens, je dois réserver trois promenades ?`,
-        answer: `Non, le prix des promenades ne change pas en fonction du nombre d'animaux que vous avez.`
+        answer: `Non, vous pouvez me communiquer le nombre d'animaux à promener dans la demande de devis. Néanmoins, sachez qu'à partir du 3ème chien et pour chaque chien supplémentaire, le prix augmente de 5€`
     },
     {
         id: 'FK2R',

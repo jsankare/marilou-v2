@@ -4,6 +4,7 @@ import TextInput from '../Inputs/Text';
 import SelectInput from '../Inputs/Select';
 import RadioInput from "../Inputs/Radio";
 import TextArea from "../Inputs/TextArea"
+import Validate from "../Inputs/Validate";
 
 const fame = [
     { value: "facebook", label: "Facebook" },
@@ -97,7 +98,7 @@ const ContactForm = () => {
                 <TextArea label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
             </OneGridWrapper>
             <ConfirmWrapper>
-
+                <Validate text="Confirmer" />
             </ConfirmWrapper>
         </Container>
     );

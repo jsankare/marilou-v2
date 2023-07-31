@@ -26,9 +26,10 @@ const Person = [
         },
       ],
       features: [
-        'Feature 1: Lorem ipsum dolor sit amet',
-        'Feature 2: Consectetur adipiscing elit',
-        'Feature 3: Sed do eiusmod tempor incididunt',
+        `Promenade en laisse ou détaché (avec un bon rappel)`,
+        `Moment privilégié de câlins et de caresses`,
+        `Jeux & intéractions durant la promenade`,
+        `Séance photo si autorisation préalable`,
       ],
     },
     {
@@ -36,22 +37,40 @@ const Person = [
       price: "",
       variable: [
         {
-            value: "1 animal",
-            cost: "5€",
+            value: "Chiens",
+            additional: [
+                {
+                    number: "1 animal",
+                    cost: "15€",
+                },
+                {
+                    number: "2 animaux",
+                    cost: "20€",
+                },
+                {
+                    number: "3 animaux",
+                    cost: "25€",
+                },
+            ]
         },
         {
-            value: "2 animaux",
-            cost: "20€",
-        },
-        {
-            value: "3 animaux",
-            cost: "25€",
+            value: "Chats",
+            additional: [
+                {
+                    number: "Prix par animal",
+                    cost: "5€",
+                },
+            ]
         },
       ],
       features: [
-        'Feature 1: Lorem ipsum dolor sit amet',
-        'Feature 2: Consectetur adipiscing elit',
-        'Feature 3: Sed do eiusmod tempor incididunt',
+        `Alimenter et abreuver les animaux`,
+        `Sortie jardin pour faire les besoins`,
+        `Contrôle de l'intégrité du domicile`,
+        `Administration de soins/médicaments si necessaire`,
+        `Moment privilégié de câlins et caresses`,
+        `Jeux et intéractions`,
+        `Séance photo si autorisation préalable`,
       ],
     },
     {
@@ -84,7 +103,7 @@ const Person = [
                 },
                 {
                     number: "2 animaux",
-                    cost: "452,20",
+                    cost: "452,20€",
                 },
                 {
                     number: "3 animaux",
@@ -94,8 +113,13 @@ const Person = [
         },
       ],
       features: [
-        'Feature 2: Consectetur adipiscing elit',
-        'Feature 3: Sed do eiusmod tempor incididunt',
+        `3 visites à domicile par jour`,
+        `Promenade de 30 minutes`,
+        `Jeux et intéraction`,
+        `Contrôle de l'intégrité du domicile`,
+        `Administration de soins/médicaments si necessaire`,
+        `Moment privilégié de câlins et caresses`,
+        `Séances photo si autorisation préalable`,
       ],
     },
     {
@@ -125,9 +149,13 @@ const Person = [
         },
       ],
       features: [
-        'Feature 1: Lorem ipsum dolor sit amet',
-        'Feature 2: Consectetur adipiscing elit',
-        'Feature 3: Sed do eiusmod tempor incididunt',
+        `3 visites à domicile par jour`,
+        `Promenade de 30 minutes`,
+        `Jeux et intéraction`,
+        `Contrôle de l'intégrité du domicile`,
+        `Administration de soins/médicaments si necessaire`,
+        `Moment privilégié de câlins et caresses`,
+        `Séances photo si autorisation préalable`,
       ],
     },
   ];
@@ -163,12 +191,13 @@ const Person = [
         },
       ],
       features: [
-        'Feature 1: Lorem ipsum dolor sit amet',
-        'Feature 2: Consectetur adipiscing elit',
-        'Feature 3: Sed do eiusmod tempor incididunt',
-        'Feature 3: Sed do eiusmod tempor incididunt',
-        'Feature 3: Sed do eiusmod tempor incididunt',
-        'Feature 3: Sed do eiusmod tempor incididunt',
+        `Alimenter et abreuver tous les animaux de l’élevage`,
+        `Administration de soins/médicaments si nécessaire`,
+        `Nettoyage complet de la nursery `,
+        `Nettoyage des box/chenils adultes complets intérieur/extérieur`,
+        `Sortir les animaux hors de leur box (séparés ou ensemble)`,
+        `Jeux et interactions avec chacun des chiens`,
+        `Séance photos avec autorisation du propriétaire`,
       ],
     },
   ];

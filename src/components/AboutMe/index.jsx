@@ -14,6 +14,10 @@ const Container = styled.section`
 const Picture = styled.img`
     width: 100%;
     max-width: 600px;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
 `
 
 const Content = styled.div`
@@ -33,7 +37,7 @@ const Description = styled.p``
 const AboutMe = () => {
     return (
         <Container>
-            <Picture src="/images/about_placeholder.jpg" />
+            <Picture src="/images/marilou.jpeg" />
             <Content>
                 <Title>À Propos de Marilou</Title>
                 <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</Description>

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +11,19 @@ const Container = styled.div `
     gap: 20px;
     width: 100%;
     max-width: 550px;
+    ${(props) =>
+        props.disabled &&
+        css`
+            &:hover {
+                cursor: not-allowed;
+            }
+        `
+    }
+`
+
+const ImageWrapper = styled.div`
+    position: relative;
+    max-height: 320px;
 `
 
 const Image = styled.img `
@@ -37,13 +50,35 @@ const CallToAction = styled(Link) `
     font-size: 20px;
 `
 
-const PrestationCard = ({image, title, description, path}) => {
+const DisabledOverlay = styled.div`
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const DisabledText = styled.p`
+    color: #478079;
+    font-size: 44px;
+    font-weight: 700;
+`
+
+const PrestationCard = ({image, title, description, path, disabled, cta}) => {
     return (
-        <Container>
-            <Image src={image} />
+        <Container disabled={disabled} >
+            <ImageWrapper>
+                {disabled && <DisabledOverlay> <DisabledText> {cta} </DisabledText> </DisabledOverlay> }
+                <Image src={image} />
+            </ImageWrapper>
             <Title> {title} </Title>
             <Description> {description} </Description>
-            <CallToAction to={path} >Me renseigner<FontAwesomeIcon icon={faChevronRight} /></CallToAction>
+            <CallToAction to={path} > {cta} <FontAwesomeIcon icon={faChevronRight} /></CallToAction>
         </Container>
     );
 };

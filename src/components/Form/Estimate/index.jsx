@@ -6,6 +6,7 @@ import RadioInput from "../Inputs/Radio";
 import DateInput from "../Inputs/Date"
 import NumberInput from "../Inputs/Number"
 import TextArea from "../Inputs/TextArea"
+import Validate from "../Inputs/Validate";
 
 const status = [
     { value: "company", label: "Une entreprise" },
@@ -16,11 +17,6 @@ const race = [
     { value: "felids", label: "Chat" },
     { value: "canidae", label: "Chien" },
     { value: "felicani", label: "Chien & chat" },
-    { value: "equines", label: "Cheval ou âne" },
-    { value: "mustelids", label: "Furet ou putois" },
-    { value: "rodents", label: "Souris, rat, hamster ou gerbille" },
-    { value: "chinchillidae", label: "Chichilla" },
-    { value: "cavileporides", label: "Cochon d'Inde ou lapin" },
     { value: "others", label: "Autre (précisez dans le message)" },
 ];
 
@@ -118,7 +114,7 @@ const ContactForm = () => {
                 <TextArea label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
             </OneGridWrapper>
             <ConfirmWrapper>
-
+                <Validate text="Demander mon devis" />
             </ConfirmWrapper>
         </Container>
     );

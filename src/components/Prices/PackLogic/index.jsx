@@ -12,15 +12,21 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   align-items: center;
 `
 
 const Button = styled.a`
   cursor: pointer;
-  padding: 10px;
-  background-color: ${(props) => (props.active ? "#ccc" : "transparent")};
+  padding: 10px 15px;
+  font-size: 20px;
+  box-shadow: ${(props) => (props.active ? "rgba(0, 0, 0, 0.35) 0px 5px 15px" : "none")};
+  background-color: ${(props) => (props.active ? "#A2C1BC" : "transparent")};
   border: ${(props) => (props.active ? "1px solid #000" : "none")};
+  border-radius: ${(props) => (props.active ? "25px" : "none")};
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 const Title = styled.h2`
@@ -36,13 +42,6 @@ const Variable = styled.div`
   max-width: 600px;
   gap: 5px;
   justify-content: center;
-
-  button {
-    cursor: pointer;
-    padding: 10px;
-    background-color: ${(props) => (props.active ? "#ccc" : "transparent")};
-    border: ${(props) => (props.active ? "1px solid #000" : "none")};
-  }
 `
 
 const PackLogic = ({ packsData, title }) => {
@@ -53,7 +52,6 @@ const PackLogic = ({ packsData, title }) => {
   const [selectedPrice, setSelectedPrice] = useState(null);
 
   useEffect(() => {
-    // Set the default selected price when a new variable is selected
     if (selectedVariable !== null) {
       setSelectedPrice(selectedVariable.cost);
     }
@@ -61,7 +59,6 @@ const PackLogic = ({ packsData, title }) => {
 
   const handlePetClick = (pet) => {
     setSelectedPet(pet);
-    // Set the selected price when a new pet is selected
     setSelectedPrice(pet.cost);
   };
 

@@ -14,6 +14,7 @@ const FeatureWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 400px;
 `
 
 
@@ -41,7 +42,7 @@ const CTAWrapper = styled(Link)`
     padding: 10px 0;
     text-decoration: none;
     &&:hover {
-        transform: scale(1.05);
+        background-color: #538A82;
     }
 `
 
@@ -61,7 +62,7 @@ const Pack = ({ name, price, features, pet }) => {
         </Heading>
         <FeatureWrapper>
             {features && features.map((feature, index) => (
-            <div key={index}>{feature}</div>
+            <div key={index}>- {feature}</div>
             ))}
         </FeatureWrapper>
         <CTAWrapper to="/estimate">
