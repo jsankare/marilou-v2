@@ -2,6 +2,7 @@
   "name": "marilou-v2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://{jsankare}.github.io/{marilou-v2}",
   "dependencies": {
     "@fontsource/dosis": "^4.5.11",
     "@fontsource/roboto": "^4.5.8",
@@ -25,8 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "homepage": "http://{jsankare}.github.io/{marilou-v2}"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
