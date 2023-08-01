@@ -61,7 +61,7 @@ const Review = ({ reviews }) => {
   return (
     <ReviewContainer>
       <Title>Les avis des clients</Title>
-      <ReviewContent>"{review.quote}"</ReviewContent>
+      <ReviewContent>&apos;{review.quote}&apos;</ReviewContent>
       <ReviewAuthor>
         <div>- {review.name}</div>
       </ReviewAuthor>

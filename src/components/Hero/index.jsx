@@ -40,7 +40,7 @@ function Hero() {
             <Background src="/images/dogs_near_water.jpg" />
             <Content>
                 <Title>Garde animaux Seine-et-marne (77)</Title>
-                <Subtitle>Prenez soin de votre animal de compagnie en Seine-et-Marne avec Marilou - Services de garde d'animaux de qualité pour votre tranquillité d'esprit.</Subtitle>
+                <Subtitle>Prenez soin de votre animal de compagnie en Seine-et-Marne avec Marilou - Services de garde d&apos;animaux de qualité pour votre tranquillité d&apos;esprit.</Subtitle>
             </Content>
         </Container>
     );

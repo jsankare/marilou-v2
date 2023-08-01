@@ -56,7 +56,7 @@ const SmallArticle = ( {image, title, catchphrase, link} ) => {
             <Content>
             <Title> {title} </Title>
             <Catchphrase> {catchphrase} </Catchphrase>
-            <Link href={link} target="blank" > Lire l'article ici <FontAwesomeIcon icon={faChevronRight} /> </Link>
+            <Link href={link} target="blank" > Lire l&apos;article ici <FontAwesomeIcon icon={faChevronRight} /> </Link>
             </Content>
         </Container>
     );

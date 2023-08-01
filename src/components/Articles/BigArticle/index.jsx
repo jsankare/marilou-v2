@@ -59,7 +59,7 @@ const BigArticle = ({ image, title, catchphrase, link, flexColumn }) => {
                 <Title>{title}</Title>
                 <Catchphrase>{catchphrase}</Catchphrase>
                 <Link href={link} target="_blank" rel="noopener noreferrer">
-                   Lire l'article ici<FontAwesomeIcon icon={faChevronRight} />
+                   Lire l&apos;article ici<FontAwesomeIcon icon={faChevronRight} />
                 </Link>
             </Content>
         </Container>

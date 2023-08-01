@@ -46,7 +46,7 @@ const PrestationTitle = ({ image, title, subtitle, author }) => {
             <Background src={image} />
             <TextWrapper>
                 <Title> {title} </Title>
-                <Subtext> "{subtitle}" </Subtext>
+                <Subtext> &quot;{subtitle}&quot; </Subtext>
                 <Author> - {author} </Author>
             </TextWrapper>         
         </Container>

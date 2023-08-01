@@ -75,7 +75,7 @@ const PrestationCard = ({image, title, description, path, disabled, cta}) => {
         <Container disabled={disabled} >
             <ImageWrapper href={path} >
                 {disabled && <DisabledOverlay> <DisabledText> {cta} </DisabledText> </DisabledOverlay> }
-                <Image src={image} />
+                <Image src={image} alt="" />
             </ImageWrapper>
             <Title> {title} </Title>
             <Description> {description} </Description>

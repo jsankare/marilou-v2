@@ -77,7 +77,7 @@ const Pitch = () => {
         <Container>
             <Header>
                 <Title>Pourquoi faire appel à nos services ?</Title>
-                <Subtitle>Un animal de compagnie est un membre de votre famille. Avec nos services, nous ferons en sorte que tout le soin et l'attention requise pour leur bien-être leur soit donné.</Subtitle>
+                <Subtitle>Un animal de compagnie est un membre de votre famille. Avec nos services, nous ferons en sorte que tout le soin et l&apos;attention requise pour leur bien-être leur soit donné.</Subtitle>
             </Header>
             <PitchCards>
                 {data.map((pitch) => (

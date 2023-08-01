@@ -78,7 +78,7 @@ const Faq = () => {
         <Container>
             <Heading>
                 <FaqTitle>FAQs</FaqTitle>
-                <FaQText>Des réponses détaillées aux questions les plus fréquemment posées : Trouvez ici l'aide dont vous avez besoin.</FaQText>
+                <FaQText>Des réponses détaillées aux questions les plus fréquemment posées : Trouvez ici l&apos;aide dont vous avez besoin.</FaQText>
             </Heading>
             <Questions>
             <Divider />
