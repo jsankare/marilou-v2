@@ -7,6 +7,7 @@ import AboutMe from "../src/components/AboutMe";
 import Testimonial from "../src/components/Testimonial";
 import Faq from "../src/components/Faq";
 import ContactForm from "../src/components/Form/Contact";
+import Head from 'next/head'
 
 const Wrapper = styled.div `
   display: flex;
@@ -18,6 +19,9 @@ const Wrapper = styled.div `
 const Home = () => {
     return (
         <Wrapper>
+            <Head>
+                <title>Marilou</title>
+            </Head>
             <Hero />
             <Concept />
             <Prestations />

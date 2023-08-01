@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import Header from '../src/components/PageHero';
 import EstimateForm from "../src/components/Form/Estimate";
+import Head from "next/head";
 
 const Container = styled.section`
     display: flex;
@@ -14,6 +15,9 @@ const Container = styled.section`
 const Values = () => {
     return (
         <Container>
+            <Head>
+                <title>Devis</title>
+            </Head>
             <Header image="/images/dog_mockup.jpg" title="Nous contacter" subtitle="La communication est un art qui implique d'écouter autant que de parler." author="Epictète" />
             <EstimateForm />
         </Container>

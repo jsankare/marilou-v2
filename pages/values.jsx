@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../src/components/PageHero';
 import Pitch from "../src/components/Pitch";
 import Articles from "../src/components/Articles";
+import Head from "next/head";
 
 const Container = styled.section`
     display: flex;
@@ -14,6 +15,9 @@ const Container = styled.section`
 const Values = () => {
     return (
         <Container>
+            <Head>
+                <title>Nos valeurs</title>
+            </Head>
             <Header image="/images/dogs_with_toy.jpg" title="Nos valeurs" subtitle="La grandeur d'une nation et son progrès moral peuvent être jugés par la manière dont elle traite ses animaux." author="Mahatma Gandhi" />
             <Pitch />
             <Articles />

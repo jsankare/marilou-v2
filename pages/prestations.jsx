@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import Header from '../src/components/PageHero';
 import PackLogic from "../src/components/Prices/PackLogic";
+import Head from "next/head";
 
 const Person = [
     {
@@ -227,6 +228,9 @@ const Individuals = styled.div`
 const Prestations = () => {
     return (
         <Container>
+            <Head>
+                <title>Prestations</title>
+            </Head>
             <Header image="/images/prestationsbackground.jpg" title="Prestations" subtitle="La plus petite des bonnes actions envers un animal est un pas vers la construction d'un monde meilleur." author="Richard Carlson" />
             <Wrapper>
                 <Individuals>
