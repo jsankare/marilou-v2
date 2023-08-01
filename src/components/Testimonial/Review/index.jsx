@@ -6,6 +6,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 const ReviewContainer = styled.div`
   position: relative;
   width: 600px;
+  height: 250px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -33,14 +34,14 @@ const Controls = styled.div``
 const PreviousButton = styled.a`
   position: absolute;
   left: -90px;
-  top: 45%;
+  top: 35%;
   cursor: pointer;
 `
 
 const NextButton = styled.a`
   position: absolute;
   right: -80px;
-  top: 45%;
+  top: 35%;
   cursor: pointer;
 `
 

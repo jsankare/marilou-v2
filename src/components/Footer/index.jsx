@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const Container = styled.section`
     width: 100%;
-    max-width: 1300px;
-    padding: 0 20px;
+    max-width: 1800px;
+    padding: 30px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
