@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/marilou-logo-cropped.png';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const BannerContainer = styled.div`
   color: black;
@@ -13,7 +14,7 @@ const BannerContainer = styled.div`
   display: flex;
 `;
 
-const Logo = styled.img`
+const Logo = styled(Image)`
   width: 68px;
   height: 62px;
 `;
@@ -42,22 +43,22 @@ const StyledLink = styled(Link)`
 function Banner() {
     return (
       <BannerContainer>
-        <StyledLink to="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
+        <StyledLink href="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
         <LinkContainer>
           <li>
-            <StyledLink to="/">Accueil</StyledLink>
+            <StyledLink href="/">Accueil</StyledLink>
           </li>
           <li>
-            <StyledLink to="/values">Nos valeurs</StyledLink>
+            <StyledLink href="/values">Nos valeurs</StyledLink>
           </li>
           <li>
-            <StyledLink to="/prestations">Prestations</StyledLink>
+            <StyledLink href="/prestations">Prestations</StyledLink>
           </li>
           <li>
-            <StyledLink to="/#contact">Contact</StyledLink>
+            <StyledLink href="/#contact">Contact</StyledLink>
           </li>
           <li>
-            <StyledLink to="/estimate">Devis</StyledLink>
+            <StyledLink href="/estimate">Devis</StyledLink>
           </li>
         </LinkContainer>
       </BannerContainer>

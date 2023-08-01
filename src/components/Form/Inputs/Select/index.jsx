@@ -22,7 +22,7 @@ const StyledOption = styled.option``
 const Select = ({label, name, placeholder, options}) => {
     return (
         <Container>
-            <StyledLabel  for={name} >{label}</StyledLabel>
+            <StyledLabel  htmlFor={name} >{label}</StyledLabel>
             <StyledSelect type="select" id={name} name={name} placeholder={placeholder}>
                 <StyledOption value=""> {placeholder} </StyledOption>
                 {options.map((option) => (

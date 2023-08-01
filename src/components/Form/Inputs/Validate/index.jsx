@@ -9,7 +9,7 @@ const Container = styled.div`
     }
 `
 
-const Text = styled.a`
+const StyledLink = styled.a`
     padding: 15px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -21,7 +21,7 @@ const Text = styled.a`
 const Validate = ({text}) => {
     return (
         <Container>
-            <Text href="" > {text} </Text>
+            <StyledLink href="" > {text} </StyledLink>
         </Container>
     );
 };

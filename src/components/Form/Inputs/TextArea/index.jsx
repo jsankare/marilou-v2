@@ -22,7 +22,7 @@ const StyledArea = styled.textarea`
 const TextArea = ({label, name, placeholder}) => {
     return (
         <Container>
-            <StyledLabel  for={name} >{label}</StyledLabel>
+            <StyledLabel  htmlFor={name} >{label}</StyledLabel>
             <StyledArea id={name} name={name} placeholder={placeholder} />
         </Container>
     );

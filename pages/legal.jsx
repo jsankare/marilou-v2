@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
-import Header from '../../components/PageHero';
-import Conditions from "../../components/Conditions";
+import Header from '../src/components/PageHero';
+import Conditions from "../src/components/Conditions";
 
 const Container = styled.section`
     display: flex;

@@ -20,7 +20,7 @@ const StyledInput = styled.input`
 const Date = ({label, name}) => {
     return (
         <Container>
-            <StyledLabel  for={name} >{label}</StyledLabel>
+            <StyledLabel  htmlFor={name} >{label}</StyledLabel>
             <StyledInput type="date" id={name} name={name} />
         </Container>
     );

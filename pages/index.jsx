@@ -1,12 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
-import Hero from '../../components/Hero';
-import Concept from '../../components/Concept';
-import Prestations from '../../components/Prestations';
-import AboutMe from "../../components/AboutMe";
-import Testimonial from "../../components/Testimonial";
-import Faq from "../../components/Faq";
-import ContactForm from "../../components/Form/Contact";
+import Hero from '../src/components/Hero';
+import Concept from '../src/components/Concept';
+import Prestations from '../src/components/Prestations';
+import AboutMe from "../src/components/AboutMe";
+import Testimonial from "../src/components/Testimonial";
+import Faq from "../src/components/Faq";
+import ContactForm from "../src/components/Form/Contact";
 
 const Wrapper = styled.div `
   display: flex;

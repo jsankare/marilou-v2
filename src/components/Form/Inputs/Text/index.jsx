@@ -20,7 +20,7 @@ const StyledInput = styled.input`
 const Text = ({label, name, placeholder}) => {
     return (
         <Container>
-            <StyledLabel  for={name} >{label}</StyledLabel>
+            <StyledLabel  htmlFor={name} >{label}</StyledLabel>
             <StyledInput type="text" id={name} name={name} placeholder={placeholder} />
         </Container>
     );

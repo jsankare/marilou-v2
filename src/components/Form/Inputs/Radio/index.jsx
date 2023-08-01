@@ -37,7 +37,7 @@ const StyledRadio = styled.input`
 const Radio = ({label, name, options}) => {
     return (
         <Container>
-            <StyledLabel  for={name} >{label}</StyledLabel>
+            <StyledLabel htmlFor={name} >{label}</StyledLabel>
             <Wrapper>
                 {options.map((option) => (
                     <div key={option.value}>

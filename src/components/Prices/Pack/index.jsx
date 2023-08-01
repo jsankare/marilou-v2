@@ -1,5 +1,5 @@
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -65,8 +65,8 @@ const Pack = ({ name, price, features, pet }) => {
             <div key={index}>- {feature}</div>
             ))}
         </FeatureWrapper>
-        <CTAWrapper to="/estimate">
-            <CTA to="/estimate" >Demander un devis</CTA>
+        <CTAWrapper href="/estimate">
+            <CTA href="/estimate" >Demander un devis</CTA>
         </CTAWrapper>
     </Container>
   );

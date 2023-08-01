@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
-import Header from '../../components/PageHero';
-import PackLogic from "../../components/Prices/PackLogic";
+import Header from '../src/components/PageHero';
+import PackLogic from "../src/components/Prices/PackLogic";
 
 const Person = [
     {

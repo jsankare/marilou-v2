@@ -1,8 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
-import Header from '../../components/PageHero';
-import Pitch from "../../components/Pitch";
-import Articles from "../../components/Articles";
+import Header from '../src/components/PageHero';
+import Pitch from "../src/components/Pitch";
+import Articles from "../src/components/Articles";
 
 const Container = styled.section`
     display: flex;

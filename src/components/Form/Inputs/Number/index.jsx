@@ -20,7 +20,7 @@ const StyledInput = styled.input`
 const Number = ({label, name, placeholder}) => {
     return (
         <Container>
-            <StyledLabel  for={name} >{label}</StyledLabel>
+            <StyledLabel  htmlFor={name} >{label}</StyledLabel>
             <StyledInput type="number" id={name} name={name} placeholder={placeholder} min="1" max="500" />
         </Container>
     );

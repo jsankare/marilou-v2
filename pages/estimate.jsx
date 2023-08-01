@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
-import Header from '../../components/PageHero';
-import EstimateForm from "../../components/Form/Estimate";
+import Header from '../src/components/PageHero';
+import EstimateForm from "../src/components/Form/Estimate";
 
 const Container = styled.section`
     display: flex;

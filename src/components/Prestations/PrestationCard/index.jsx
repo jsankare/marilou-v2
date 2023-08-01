@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from 'styled-components';
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
 
 const Container = styled.div `
     display: flex;
@@ -73,13 +73,13 @@ const DisabledText = styled.p`
 const PrestationCard = ({image, title, description, path, disabled, cta}) => {
     return (
         <Container disabled={disabled} >
-            <ImageWrapper to={path} >
+            <ImageWrapper href={path} >
                 {disabled && <DisabledOverlay> <DisabledText> {cta} </DisabledText> </DisabledOverlay> }
                 <Image src={image} />
             </ImageWrapper>
             <Title> {title} </Title>
             <Description> {description} </Description>
-            <CallToAction to={path} > {cta} <FontAwesomeIcon icon={faChevronRight} /></CallToAction>
+            <CallToAction href={path} > {cta} <FontAwesomeIcon icon={faChevronRight} /></CallToAction>
         </Container>
     );
 };

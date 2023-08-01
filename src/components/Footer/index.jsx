@@ -1,5 +1,5 @@
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const Container = styled.section`
@@ -79,28 +79,28 @@ const Footer = () => {
         <Container>
             <Content>
                 <Informations>
-                    <StyledLink><Logo src="/images/logo.png" /></StyledLink>
+                    <StyledLink href="/" ><Logo src="/images/logo.png" /></StyledLink>
                     <Contact>
                         <ContactTitle>Contact :</ContactTitle>
                         <Socials>
-                            <StyledLink to="tel:0674802188" ><Icon src="/images/phone.png" /></StyledLink>
-                            <StyledLink to="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" /></StyledLink>
-                            <StyledLink to="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" /></StyledLink>
-                            <StyledLink to="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" /></StyledLink>
+                            <StyledLink href="tel:0674802188" ><Icon src="/images/phone.png" /></StyledLink>
+                            <StyledLink href="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" /></StyledLink>
+                            <StyledLink href="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" /></StyledLink>
+                            <StyledLink href="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" /></StyledLink>
                         </Socials>
                     </Contact>
                 </Informations>
                 <Sitemap>
-                    <StyledLink to="/" >Accueil</StyledLink>
-                    <StyledLink to="/prestations" >Prestations</StyledLink>
-                    <StyledLink to="/values" >Nos valeurs</StyledLink>
-                    <StyledLink to="/estimate" >Devis</StyledLink>
-                    <StyledLink to="/legal" >Conditions d'utilisation</StyledLink>
+                    <StyledLink href="/" >Accueil</StyledLink>
+                    <StyledLink href="/prestations" >Prestations</StyledLink>
+                    <StyledLink href="/values" >Nos valeurs</StyledLink>
+                    <StyledLink href="/estimate" >Devis</StyledLink>
+                    <StyledLink href="/legal" >Conditions d'utilisation</StyledLink>
                 </Sitemap>
             </Content>
             <Dividor />
             <Rights>
-                <Maker>Création <StyledLink to="https://www.jsankare.dev" target="blank" >Jordan Sankare</StyledLink></Maker>
+                <Maker>Création <StyledLink href="https://www.jsankare.dev" target="blank" >Jordan Sankare</StyledLink></Maker>
             </Rights>
         </Container>
     );
