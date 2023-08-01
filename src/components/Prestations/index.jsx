@@ -21,15 +21,15 @@ const data = [
         cta: `Me renseigner`,
         disabled: false,
     },
-    {
-        id: 'D86Z',
-        image: '/images/dogTraining.jpg',
-        title: `Éducation canine`,
-        description: `Pour les propriétaires soucieux d'éduquer et de socialiser leurs chiens, nous offrons des séances d'éducation canine adaptées à leurs besoins spécifiques. Nos dresseurs expérimentés utilisent des méthodes positives et encourageantes pour enseigner des commandes de base, corriger les comportements indésirables et favoriser une relation harmonieuse entre vous et votre animal.`,
-        path: `/404`,
-        cta: `Bientôt disponible`,
-        disabled: true,
-    },
+    // {
+    //     id: 'D86Z',
+    //     image: '/images/dogTraining.jpg',
+    //     title: `Éducation canine`,
+    //     description: `Pour les propriétaires soucieux d'éduquer et de socialiser leurs chiens, nous offrons des séances d'éducation canine adaptées à leurs besoins spécifiques. Nos dresseurs expérimentés utilisent des méthodes positives et encourageantes pour enseigner des commandes de base, corriger les comportements indésirables et favoriser une relation harmonieuse entre vous et votre animal.`,
+    //     path: `/404`,
+    //     cta: `Bientôt disponible`,
+    //     disabled: true,
+    // },
     {
         id: 'D92E',
         image: '/images/dogWell.jpg',
@@ -46,27 +46,43 @@ const Container = styled.section `
     max-width: 1300px;
     padding: 0 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
 `
 
+const Wrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 50px;
+`
+
+const Title = styled.h2`
+    font-size: 30px;
+    color: #538A82;
+    font-weight: bold;
+`
 
 const Prestations = () => {
     return (
         <Container>
-            {data.map((card) => (
-                <PrestationCard 
-                    key={card.id}
-                    image={card.image}
-                    title={card.title}
-                    description={card.description}
-                    path={card.path}
-                    cta={card.cta}
-                    disabled={card.disabled}
-                />
-            ))}
+            <Title>Ce que je propose</Title>
+            <Wrapper>
+                {data.map((card) => (
+                    <PrestationCard 
+                        key={card.id}
+                        image={card.image}
+                        title={card.title}
+                        description={card.description}
+                        path={card.path}
+                        cta={card.cta}
+                        disabled={card.disabled}
+                    />
+                ))}
+            </Wrapper>
         </Container>
     );
 };

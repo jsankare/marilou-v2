@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'; 
 
 const ReviewContainer = styled.div`
   position: relative;
@@ -30,27 +30,29 @@ const ReviewAuthor = styled.div`
 
 const Controls = styled.div``
 
-const PreviousButton = styled.button`
+const PreviousButton = styled.a`
   position: absolute;
   left: -90px;
-  top: 35%;
+  top: 45%;
+  cursor: pointer;
 `
 
-const NextButton = styled.button`
+const NextButton = styled.a`
   position: absolute;
   right: -80px;
-  top: 35%;
+  top: 45%;
+  cursor: pointer;
 `
 
 const Review = ({ reviews }) => {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
   const prevQuote = () => {
-    setCurrentQuoteIndex((prevIndex) => prevIndex - 1);
+    setCurrentQuoteIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
   };
 
   const nextQuote = () => {
-    setCurrentQuoteIndex((prevIndex) => prevIndex + 1);
+    setCurrentQuoteIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1));
   };
 
   const review = reviews[currentQuoteIndex];
@@ -67,13 +69,13 @@ const Review = ({ reviews }) => {
           disabled={currentQuoteIndex === 0}
           onClick={prevQuote}
         >
-          Précédent
+          <FontAwesomeIcon icon={faChevronLeft} size='2x' />
         </PreviousButton>
         <NextButton
           disabled={currentQuoteIndex === reviews.length - 1}
           onClick={nextQuote}
         >
-          Suivant
+          <FontAwesomeIcon icon={faChevronRight} size='2x' />
         </NextButton>
       </Controls>
     </ReviewContainer>

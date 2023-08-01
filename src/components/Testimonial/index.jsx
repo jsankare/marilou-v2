@@ -25,7 +25,12 @@ const Testimonial = () => {
       quote: `Excellente prestation. Marilou est une personne de confiance et sympathique, mon chien était très heureux, on recommande !`,
       name: `Mme Delachanal`,
       picture: ``,
-  },
+    },
+    {
+      quote: `Marilou prend soin de mon chat à chaque fois que je pars en vacances, il est très bien choyé et heureux de la voir arriver pour profiter de ses câlins et de sa dose de croquettes. Je recommande vivement Marilou !`,
+      name: `Mr Pinna Stéphane`,
+      picture: ``,
+    },
   ];
 
   return (

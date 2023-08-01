@@ -51,12 +51,6 @@ const PackLogic = ({ packsData, title }) => {
 
   const [, setSelectedPrice] = useState(null);
 
-  useEffect(() => {
-    if (selectedVariable !== null) {
-      setSelectedPrice(selectedVariable.cost);
-    }
-  }, [selectedVariable]);
-
   const handlePetClick = (pet) => {
     setSelectedPet(pet);
     setSelectedPrice(pet.cost);

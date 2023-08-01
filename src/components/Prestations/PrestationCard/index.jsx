@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from 'styled-components';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Container = styled.div `
     display: flex;
@@ -21,7 +21,7 @@ const Container = styled.div `
     }
 `
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(Link)`
     position: relative;
     max-height: 320px;
 `
@@ -29,7 +29,8 @@ const ImageWrapper = styled.div`
 const Image = styled.img `
     width: 100%;
     height: 100%;
-    max-height: 320px;
+    width: 500px;
+    height: 250px;
     object-fit: cover;
 `
 
@@ -72,7 +73,7 @@ const DisabledText = styled.p`
 const PrestationCard = ({image, title, description, path, disabled, cta}) => {
     return (
         <Container disabled={disabled} >
-            <ImageWrapper>
+            <ImageWrapper to={path} >
                 {disabled && <DisabledOverlay> <DisabledText> {cta} </DisabledText> </DisabledOverlay> }
                 <Image src={image} />
             </ImageWrapper>
