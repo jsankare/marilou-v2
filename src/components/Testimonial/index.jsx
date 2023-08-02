@@ -12,7 +12,7 @@ const Testimonial = () => {
 
   const reviews = [
     {
-      quote: `Merci à Marilou pour son sérieux, son professionnalisme, nous avons eu besoin de ses services un week-end et tout à été très bien pour nos deux whippets . Merci encore et certainement à très bientôt.`,
+      quote: `Merci à Marilou pour son sérieux, son professionnalisme, nous avons eu besoin de ses services un week-end et tout a été très bien pour nos deux whippets . Merci encore et certainement à très bientôt.`,
       name: "Cathy & Sylvain",
       picture: ``,
     },
@@ -28,7 +28,7 @@ const Testimonial = () => {
     },
     {
       quote: `Marilou prend soin de mon chat à chaque fois que je pars en vacances, il est très bien choyé et heureux de la voir arriver pour profiter de ses câlins et de sa dose de croquettes. Je recommande vivement Marilou !`,
-      name: `Mr Pinna Stéphane`,
+      name: `M. Pinna Stéphane`,
       picture: ``,
     },
   ];

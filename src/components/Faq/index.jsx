@@ -11,7 +11,7 @@ const data = [
     {
         id: 'VKI2',
         question: `Pouvez-vous rester dormir sur place ?`,
-        answer: `Je ne dors pas sur place, mais je peux effectuer mes visites du matin au soir selon votre convenance.`
+        answer: `Je ne dors pas sur place, mais je peux effectuer mes visites aux horaires de votre choix.`
     },
     {
         id: 'FM2I',

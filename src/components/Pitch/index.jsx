@@ -6,7 +6,7 @@ const data = [
     {
         id: 'FJZK',
         image: '/images/pitch_icon2.png',
-        title: 'Les intéractions sociales',
+        title: 'Les interactions sociales',
         subtitle: `Votre compagnon a besoin d'interagir avec d'autres êtres vivants pour son épanouissement. Des rencontres enrichissantes lui offriront une vie sociale équilibrée, favorisant son bonheur et sa sociabilité.`
     },
     {
@@ -77,7 +77,7 @@ const Pitch = () => {
         <Container>
             <Header>
                 <Title>Pourquoi faire appel à nos services ?</Title>
-                <Subtitle>Un animal de compagnie est un membre de votre famille. Avec nos services, nous ferons en sorte que tout le soin et l&apos;attention requise pour leur bien-être leur soit donné.</Subtitle>
+                <Subtitle>Un animal de compagnie est un membre de votre famille. Avec nos services, nous ferons en sorte que tout le soin et l&apos;attention requise pour leur bien-être leur soit donnés.</Subtitle>
             </Header>
             <PitchCards>
                 {data.map((pitch) => (
