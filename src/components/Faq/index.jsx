@@ -41,6 +41,9 @@ const Container = styled.section`
     padding: 0 20px;
     display: flex;
     gap: 50px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `
 
 const Divider = styled.div`

@@ -24,6 +24,7 @@ const LinkContainer = styled.ul`
   gap: 50px;
   transition: 0.1s;
   opacity: 1;
+  list-style: none;
 `;
 
 const StyledLink = styled(Link)`

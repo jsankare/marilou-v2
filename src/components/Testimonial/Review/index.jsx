@@ -12,6 +12,9 @@ const ReviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 const Title = styled.h2`
@@ -36,6 +39,9 @@ const PreviousButton = styled.a`
   left: -90px;
   top: 35%;
   cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 const NextButton = styled.a`
@@ -43,6 +49,9 @@ const NextButton = styled.a`
   right: -80px;
   top: 35%;
   cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 const Review = ({ reviews }) => {
