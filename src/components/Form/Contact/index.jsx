@@ -75,7 +75,7 @@ const Title = styled.h2`
 
 const ContactForm = () => {
     return (
-        <Container>
+        <Container id="contact" >
             <Heading>
                 <Title>Me contacter</Title>
             </Heading>

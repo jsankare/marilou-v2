@@ -16,7 +16,7 @@ const roboto = Roboto({
 const GlobalStyle = createGlobalStyle`
     html {
         font-family: ${roboto.style.fontFamily};
-          
+        scroll-behavior: smooth;
         }
         html, body, #__next {
         height: 100%;
