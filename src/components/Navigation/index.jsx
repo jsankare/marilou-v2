@@ -1,69 +1,139 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/marilou-logo-cropped.png';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const BannerContainer = styled.div`
-  color: black;
-  text-align: right;
-  padding: 5px 50px;
-  justify-content: space-between;
-  font-family: roboto;
-  align-items: center;
-  display: flex;
+    color: black;
+    text-align: right;
+    padding: 5px 50px;
+    
 `;
 
+const Desktop = styled.div`
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+`
+
+const Mobile = styled.div`
+    display: none;
+    
+    @media screen and (max-width: 1000px) {
+        justify-content: space-between;
+        display: flex;
+    }
+`
+
+const Burger = styled.img`
+    width: 100%;
+    max-width: 50px;
+    cursor: pointer;
+`
+
 const Logo = styled(Image)`
-  width: 68px;
-  height: 62px;
+    width: 68px;
+    height: 62px;
 `;
 
 const LinkContainer = styled.ul`
-  display: flex;
-  gap: 50px;
-  transition: 0.1s;
-  opacity: 1;
-  list-style: none;
+    display: flex;
+    gap: 50px;
+    transition: 0.1s;
+    opacity: 1;
+    list-style: none;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+`;
+
+const Menu = styled.div`
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 100%;
+  right: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  @media (max-width: 1000px) {
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  }
 `;
 
 const StyledLink = styled(Link)`
-  transition: 0.5s;
-  text-decoration: none;
-  color: black;
-  margin: 0 5px;
-  font-size: 20px;
-  font-weight: 400;
-  transition: 0.2s;
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.2s;
 
-  &:hover {
-    color: #538A82;
-  }
+    &:hover {
+        color: #538A82;
+    }
 `;
 
-function Banner() {
+function Navigation() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
     return (
-      <BannerContainer>
-        <StyledLink href="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
-        <LinkContainer>
-          <li>
-            <StyledLink href="/">Accueil</StyledLink>
-          </li>
-          <li>
-            <StyledLink href="/values">Nos valeurs</StyledLink>
-          </li>
-          <li>
-            <StyledLink href="/prestations">Prestations</StyledLink>
-          </li>
-          <li>
+        <BannerContainer>
+            <Desktop>
+            <StyledLink href="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
+            <LinkContainer>
+                <li>
+                    <StyledLink href="/">Accueil</StyledLink>
+                </li>
+                <li>
+                    <StyledLink href="/values">Nos valeurs</StyledLink>
+                </li>
+                <li>
+                    <StyledLink href="/prestations">Prestations</StyledLink>
+                </li>
+                <li>
+                    <StyledLink href="/estimate">Devis</StyledLink>
+                </li>
+            </LinkContainer>
+            <LinkContainer>
             <StyledLink href="/#contact">Contact</StyledLink>
-          </li>
-          <li>
-            <StyledLink href="/estimate">Devis</StyledLink>
-          </li>
-        </LinkContainer>
-      </BannerContainer>
+            </LinkContainer>
+            </Desktop>
+            <Mobile>
+            <StyledLink href="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
+            <Burger src='/images/menu.png' onClick={toggleMenu} />
+            <Menu isOpen={isMenuOpen} >
+                <li>
+                    <StyledLink href="/">Accueil</StyledLink>
+                </li>
+                <li>
+                    <StyledLink href="/values">Nos valeurs</StyledLink>
+                </li>
+                <li>
+                    <StyledLink href="/prestations">Prestations</StyledLink>
+                </li>
+                <li>
+                    <StyledLink href="/estimate">Devis</StyledLink>
+                </li>
+                <li>
+                    <StyledLink href="/contact">Contact</StyledLink>
+                </li>
+            </Menu>
+            </Mobile>
+        </BannerContainer>
     );
   }
   
-  export default Banner;
+  export default Navigation;
