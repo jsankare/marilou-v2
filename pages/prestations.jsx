@@ -83,15 +83,15 @@ const Person = [
             additional: [
                 {
                     number: "1 animal",
-                    cost: "182,70€",
+                    cost: "183€",
                 },
                 {
                     number: "2 animaux",
-                    cost: "226,10€",
+                    cost: "226€",
                 },
                 {
                     number: "3 animaux",
-                    cost: "245,70€",
+                    cost: "246€",
                 },
             ]
         },
@@ -100,15 +100,15 @@ const Person = [
             additional: [
                 {
                     number: "1 animal",
-                    cost: "325,85€",
+                    cost: "326€",
                 },
                 {
                     number: "2 animaux",
-                    cost: "452,20€",
+                    cost: "452€",
                 },
                 {
                     number: "3 animaux",
-                    cost: "491,40€",
+                    cost: "491€",
                 },
             ]
         },
@@ -168,27 +168,27 @@ const Person = [
       variable: [
         {
             value: "1 - 10 animaux",
-            cost: "25€",
+            cost: "40€",
         },
         {
             value: "11 -25 animaux",
-            cost: "35€",
-        },
-        {
-            value: "26 - 40 animaux",
-            cost: "45€",
-        },
-        {
-            value: "41 - 55 animaux",
             cost: "60€",
         },
         {
+            value: "26 - 40 animaux",
+            cost: "80€",
+        },
+        {
+            value: "41 - 55 animaux",
+            cost: "100€",
+        },
+        {
             value: "56 - 100 animaux",
-            cost: "75€",
+            cost: "115€",
         },
         {
             value: "100+ animaux",
-            cost: "100€",
+            cost: "135€",
         },
       ],
       features: [
