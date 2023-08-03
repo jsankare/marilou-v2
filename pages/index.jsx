@@ -10,10 +10,18 @@ import ContactForm from "../src/components/Form/Contact";
 import Head from 'next/head'
 
 const Wrapper = styled.div `
-  display: flex;
-  flex-direction: column;
-  gap: 75px;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    align-items: center;
+`
+
+const PagePadding = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    align-items: center;
+    padding: 0 25px;
 `
 
 const Home = () => {
@@ -23,12 +31,14 @@ const Home = () => {
                 <title>Marilou</title>
             </Head>
             <Hero />
-            <Concept />
-            <Prestations />
-            <AboutMe />
-            <Testimonial />
-            <Faq />
-            <ContactForm />
+            <PagePadding>
+                <Concept />
+                <Prestations />
+                <AboutMe />
+                <Testimonial />
+                <Faq />
+                <ContactForm />
+            </PagePadding>
         </Wrapper>
     );
 };

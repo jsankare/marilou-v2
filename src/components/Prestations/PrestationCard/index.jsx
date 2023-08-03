@@ -32,6 +32,9 @@ const Image = styled.img `
     width: 500px;
     height: 250px;
     object-fit: cover;
+    @media (max-width: 1024px) {
+        width: 300px;
+    }
 `
 
 const Title = styled.h3 `

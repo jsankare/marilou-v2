@@ -17,6 +17,13 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const StyledRadio = styled.input`

@@ -14,6 +14,9 @@ const Background = styled.img`
     position: absolute;
     z-index: -10;
     filter: brightness(0.45);
+    @media (max-width: 1024px) {
+        height: 450px;
+    }
 `
 
 const Content = styled.div`
@@ -24,15 +27,28 @@ const Content = styled.div`
     height: 570px;
     gap: 50px;
     padding: 0 100px;
+    @media (max-width: 1024px) {
+        height: 450px;
+        padding: 0 50px;
+    }
 `
 
 const Title = styled.h1`
     font-size: 50px;
     font-weight: bold;
+    @media (max-width: 1024px) {
+        font-size: 34px;
+    }
+    @media (max-width: 425px) {
+        font-size: 26px;
+    }
 `
 
 const Subtitle = styled.h2`
     font-size: 30px;
+    @media (max-width: 425px) {
+        font-size: 20px;
+    }
 `
 
 function Hero() {

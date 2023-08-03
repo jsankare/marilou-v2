@@ -5,10 +5,13 @@ const Container = styled.section`
     display: flex;
     width: 100%;
     max-width: 1300px;
-    padding: 0 20px;
     align-items: center;
     margin: 0;
     gap: 50px;
+    @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+
+    }
 `
 
 const Picture = styled.img`

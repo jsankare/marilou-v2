@@ -44,6 +44,9 @@ const Container = styled.section`
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 `
 
 const Divider = styled.div`
