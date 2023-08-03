@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const PictureWrapper = styled.div`
     width: 100%;
-    height: 200px;
+    height: 150px;
     max-width: ${({ flexColumn }) => (flexColumn ? '' : '350px')};
     overflow: hidden;
     position: relative;
@@ -34,6 +34,7 @@ const Content = styled.div`
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+    height: auto;
 `
 
 const Title = styled.h3`

@@ -217,11 +217,25 @@ const Wrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
 `
 
 const Profesionnals = styled.div``
 
-const Individuals = styled.div`
+const Individuals = styled.div``
+
+const Dividor = styled.div`
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin: 0 auto;
+    display: none;
+    @media (max-width: 1024px) {
+        display: block;
+        width: 70%;
+    }
 
 `
 
@@ -236,6 +250,7 @@ const Prestations = () => {
                 <Individuals>
                     <PackLogic packsData={Person} title="Particuliers" />
                 </Individuals>
+                <Dividor />
                 <Profesionnals>
                     <PackLogic packsData={Company} title="Professionnels" />
                 </Profesionnals>

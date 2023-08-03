@@ -8,13 +8,17 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 25px;
+    @media (max-width: 768px) {
+        padding: 25px 15px;
+        margin: 5px;
+    }
 `
 
 const FeatureWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 400px;
+    width: 100%;
 `
 
 
@@ -32,6 +36,9 @@ const Name = styled.h4`
 
 const Price = styled.h3`
     font-size: 36px;
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
 `
 
 const CTAWrapper = styled(Link)`

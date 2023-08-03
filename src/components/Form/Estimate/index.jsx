@@ -38,6 +38,9 @@ const Container = styled.section`
     gap: 50px;
     width: 100%;
     max-width: 1200px;
+    @media (max-width: 1024px) {
+        width: 80%;
+    }
 `
 
 const Heading = styled.div`
@@ -47,7 +50,7 @@ const Heading = styled.div`
     align-items: center;
 `
 
-const OneGridWrapper = styled.form`
+const OneWrapper = styled.form`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 50px;
@@ -57,20 +60,28 @@ const OneGridWrapper = styled.form`
     align-items: center;
 `
 
-const TwoGridWrapper = styled.form`
+const TwoWrapper = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     max-width: 800px;
     width: 100%;
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 `
 
-const ThreeGridWrapper = styled.form`
+const ThreeWrapper = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     max-width: 800px;
     width: 100%;
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 `
 
 const ConfirmWrapper = styled.div``
@@ -87,32 +98,32 @@ const ContactForm = () => {
             <Heading>
                 <Title>Demander un devis</Title>
             </Heading>
-            <TwoGridWrapper>
+            <TwoWrapper>
                 <TextInput label="Prénom" placeholder="Martine" />
                 <TextInput label="Nom" placeholder="Dupuis" />
-            </TwoGridWrapper>
-            <ThreeGridWrapper>
+            </TwoWrapper>
+            <ThreeWrapper>
                 <TextInput label="Adresse" placeholder="5 rue Montaigne" />
                 <TextInput label="Ville" placeholder="Paris" />
                 <TextInput label="Code postal" placeholder="75015" />
-            </ThreeGridWrapper>
-            <TwoGridWrapper>
+            </ThreeWrapper>
+            <TwoWrapper>
                 <TextInput label="Email" placeholder="exemple@mail.com" />
                 <TextInput label="Téléphone" placeholder="0611121314" />
                 <RadioInput label="Vous êtes :" name="status" options={status} />
                 <NumberInput label="Nombre d'animaux à garder" name="number" placeholder="1, 5, 10 .." />
-            </TwoGridWrapper>
-            <TwoGridWrapper>
+            </TwoWrapper>
+            <TwoWrapper>
                 <SelectInput label="Le type d'animal concerné" placeholder="Choisissez ici" name="race" options={race} />
                 <SelectInput label="Votre prestation choisie" placeholder="Choisissez ici" name="prestation" options={prestation} />
-            </TwoGridWrapper>
-            <TwoGridWrapper>
+            </TwoWrapper>
+            <TwoWrapper>
             <DateInput label="Date de début de garde" />
                 <DateInput label="Date de fin de garde" />
-            </TwoGridWrapper>
-            <OneGridWrapper>
+            </TwoWrapper>
+            <OneWrapper>
                 <TextArea label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
-            </OneGridWrapper>
+            </OneWrapper>
             <ConfirmWrapper>
                 <Validate text="Demander mon devis" />
             </ConfirmWrapper>

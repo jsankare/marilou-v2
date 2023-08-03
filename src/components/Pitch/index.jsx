@@ -62,6 +62,10 @@ const PitchCards = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
+    @media (max-width: 1024px) {
+        justify-content: center;
+        gap: 100px;
+    }
 `
 
 const Title = styled.h2`
