@@ -44,7 +44,6 @@ const data = [
 const Container = styled.section `
     width: 100%;
     max-width: 1300px;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;

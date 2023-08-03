@@ -132,7 +132,7 @@ function Navigation() {
                         <StyledLink href="/estimate">Devis</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/contact">Contact</StyledLink>
+                        <StyledLink href="/#contact">Contact</StyledLink>
                     </li>
                 </Menu>
             </Mobile>

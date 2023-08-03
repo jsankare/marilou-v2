@@ -22,6 +22,9 @@ const PagePadding = styled.div`
     gap: 75px;
     align-items: center;
     padding: 0 25px;
+    @media (max-width: 375px) {
+        padding: 0 10px;
+    }
 `
 
 const Home = () => {
