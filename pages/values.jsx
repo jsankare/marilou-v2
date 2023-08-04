@@ -16,7 +16,7 @@ const Values = () => {
     return (
         <Container>
             <Head>
-                <title>Nos valeurs</title>
+                <title>Marilou - Nos valeurs</title>
             </Head>
             <Header image="/images/dogs_with_toy.jpg" title="Nos valeurs" subtitle="La grandeur d'une nation et son progrès moral peuvent être jugés par la manière dont elle traite ses animaux." author="Mahatma Gandhi" />
             <Pitch />

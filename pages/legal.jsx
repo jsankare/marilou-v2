@@ -29,7 +29,7 @@ const TermsOfService = () => {
     return (
         <Container>
             <Head>
-            <title>Legal</title>
+            <title>Marilou - Legal</title>
             </Head>
             <Header image="/images/dog_legal.jpg" title="Conditions d'utilisation" subtitle="Ce que l'on conçoit bien s'énonce clairement, Et les mots pour le dire arrivent aisément." author="Nicolas Boileau" />
             <Wrapper>

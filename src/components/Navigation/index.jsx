@@ -119,14 +119,17 @@ function Navigation() {
                         <StyledLink href="/values">Nos valeurs</StyledLink>
                     </li>
                     <li>
+                        <StyledLink href="/gallery">Galerie</StyledLink>
+                    </li>
+                    <li>
                         <StyledLink href="/prestations">Prestations</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/estimate">Devis</StyledLink>
+                        <StyledLink href="/#contact">Contact</StyledLink>
                     </li>
                 </LinkContainer>
                 <LinkContainer>
-                <StyledLink href="/#contact">Contact</StyledLink>
+                <StyledLink href="/estimate">Devis</StyledLink>
                 </LinkContainer>
             </Desktop>
             <Mobile>

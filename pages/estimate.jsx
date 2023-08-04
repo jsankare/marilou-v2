@@ -16,7 +16,7 @@ const Values = () => {
     return (
         <Container>
             <Head>
-                <title>Devis</title>
+                <title>Marilou - Devis</title>
             </Head>
             <Header image="/images/dog_mockup.jpg" title="Demander un devis" subtitle="La communication est un art qui implique d'écouter autant que de parler." author="Epictète" />
             <EstimateForm />

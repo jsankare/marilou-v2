@@ -110,6 +110,7 @@ const Footer = () => {
                     <StyledLink href="/" >Accueil</StyledLink>
                     <StyledLink href="/prestations" >Prestations</StyledLink>
                     <StyledLink href="/values" >Nos valeurs</StyledLink>
+                    <StyledLink href="/gallery" >Galerie</StyledLink>
                     <StyledLink href="/estimate" >Devis</StyledLink>
                     <StyledLink href="/#contact" >Contact</StyledLink>
                     <StyledLink href="/legal" >Conditions d&apos;utilisation</StyledLink>
