@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import logo from '../../assets/marilou-logo-cropped.png';
 import Link from 'next/link';
@@ -87,10 +87,25 @@ const StyledLink = styled(Link)`
 
 function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef(null)
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
+
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if(menuRef.current && !menuRef.current.contains(event.target))
+            setIsMenuOpen(false);
+        }
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        }
+
+    })
 
     return (
         <BannerContainer>
@@ -116,7 +131,7 @@ function Navigation() {
             </Desktop>
             <Mobile>
                 <StyledLink href="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
-                <Burger src='/images/menu.png' onClick={toggleMenu} />
+                <Burger src='/images/menu.png' onClick={toggleMenu} ref={menuRef} />
                 <Menu isOpen={isMenuOpen} >
                     <li>
                         <StyledLink href="/">Accueil</StyledLink>
