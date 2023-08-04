@@ -16,11 +16,11 @@ const fame = [
   ];
 
 const reason = [
-{ value: "information", label: "Demande d'information" },
-{ value: "estimate", label: "Demander un devis" },
-{ value: "feedback", label: "Laisser un avis" },
-{ value: "issue", label: "Problème sur le site" },
-{ value: "other", label: "Autre (précisez dans le message)" },
+    { value: "information", label: "Demande d'information" },
+    { value: "estimate", label: "Demander un devis" },
+    { value: "feedback", label: "Laisser un avis" },
+    { value: "issue", label: "Problème sur le site" },
+    { value: "other", label: "Autre (précisez dans le message)" },
 ];
 
 const Container = styled.section`
@@ -32,6 +32,10 @@ const Container = styled.section`
     max-width: 1200px;
     @media (max-width: 1024px) {
         width: 80%;
+        margin: 0;
+    }
+    @media (max-width: 375px) {
+        width: 70%;
     }
 `
 
@@ -50,6 +54,9 @@ const OneWrapper = styled.form`
     width: 100%;
     justify-content: center;
     align-items: center;
+    @media (max-width: 375px) {
+        
+    }
 `
 
 const TwoWrapper = styled.form`
@@ -82,6 +89,9 @@ const Title = styled.h2`
     font-size: 30px;
     color: #538A82;
     font-weight: bold;
+    @media screen and (max-width: 375px) {
+        font-size: 26px;
+    }
 `
 
 const ContactForm = () => {

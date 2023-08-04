@@ -8,14 +8,15 @@ const BannerContainer = styled.div`
     color: black;
     text-align: right;
     padding: 5px 50px;
-    
+    @media screen and (max-width: 425px) {
+        padding: 5px 20px;
+    }
 `;
 
 const Desktop = styled.div`
     justify-content: space-between;
     align-items: center;
     display: flex;
-    
     @media screen and (max-width: 1024px) {
         display: none;
     }
@@ -24,7 +25,6 @@ const Desktop = styled.div`
 const Mobile = styled.div`
     display: none;
     position: relative;
-    
     @media screen and (max-width: 1024px) {
         justify-content: space-between;
         display: flex;
@@ -48,7 +48,6 @@ const LinkContainer = styled.ul`
     transition: 0.1s;
     opacity: 1;
     list-style: none;
-
     @media screen and (max-width: 1024px) {
         flex-direction: column;
     }

@@ -6,6 +6,9 @@ const Container = styled.div`
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    @media (max-width: 375px) {
+        width: 70%;
+    }
 `
 
 const StyledLabel = styled.label`

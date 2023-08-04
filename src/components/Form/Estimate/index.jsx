@@ -21,14 +21,15 @@ const race = [
 ];
 
 const prestation = [
-    { value: "walk15", label: "Promenade - 15mn" },
-    { value: "walk30", label: "Promenade - 30mn" },
-    { value: "walk45", label: "Promenade - 45mn" },
-    { value: "walk60", label: "Promenade - 60mn" },
-    { value: "visit", label: "Visite" },
-    { value: "week1", label: "Forfait - 1 semaine" },
-    { value: "week2", label: "Forfait - 2 semaines" },
-    { value: "month", label: "Forfait - 1 mois" },
+    { value: "walk15", label: "Promenade(s) - 15mn" },
+    { value: "walk30", label: "Promenade(s) - 30mn" },
+    { value: "walk45", label: "Promenade(s) - 45mn" },
+    { value: "walk60", label: "Promenade(s) - 60mn" },
+    { value: "visit", label: "Visite(s)" },
+    { value: "walkandvisit", label: "Promenade(s) & visite(s)"},
+    { value: "week1", label: "Forfait(s) - 1 semaine" },
+    { value: "week2", label: "Forfait(s) - 2 semaines" },
+    { value: "month", label: "Forfait(s) - 1 mois" },
 ]
 
 const Container = styled.section`
@@ -40,6 +41,10 @@ const Container = styled.section`
     max-width: 1200px;
     @media (max-width: 1024px) {
         width: 80%;
+        margin: 0;
+    }
+    @media (max-width: 375px) {
+        width: 70%;
     }
 `
 
@@ -90,6 +95,9 @@ const Title = styled.h2`
     font-size: 30px;
     color: #538A82;
     font-weight: bold;
+    @media screen and (max-width: 375px) {
+        font-size: 26px;
+    }
 `
 
 const ContactForm = () => {

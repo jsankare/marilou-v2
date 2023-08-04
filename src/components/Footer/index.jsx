@@ -17,9 +17,17 @@ const Content = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 425px) {
+        flex-direction: column;
+        gap: 15px;
+    }
 `
 
-const Informations = styled.div``
+const Informations = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
 
 const Contact = styled.div`
     display: flex;
@@ -32,7 +40,11 @@ const Socials = styled.div`
     gap: 10px;
 `
 
-const ContactTitle = styled.h4``
+const ContactTitle = styled.h4`
+    @media (max-width: 425px) {
+        display: none;
+    }
+`
 
 const Icon = styled.img`
     width: 100%;
@@ -48,6 +60,10 @@ const Sitemap = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @media (max-width: 425px) {
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 const Rights = styled.div``
@@ -95,6 +111,7 @@ const Footer = () => {
                     <StyledLink href="/prestations" >Prestations</StyledLink>
                     <StyledLink href="/values" >Nos valeurs</StyledLink>
                     <StyledLink href="/estimate" >Devis</StyledLink>
+                    <StyledLink href="/#contact" >Contact</StyledLink>
                     <StyledLink href="/legal" >Conditions d&apos;utilisation</StyledLink>
                 </Sitemap>
             </Content>

@@ -17,9 +17,11 @@ const ReviewContainer = styled.div`
     user-select: none;
     @media (max-width: 1024px) {
         width: 400px;
+        height: auto;
     }
     @media (max-width: 768px) {
         width: auto;
+        margin: 0 auto;
     }
 `
 
@@ -28,6 +30,14 @@ const Title = styled.h2`
     color: #538A82;
     font-weight: bold;
 `
+
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 15px;
+`
+
+const TestimonialWrapper = styled.div``
 
 const ReviewContent = styled.div`
     font-size: 26px;
@@ -44,32 +54,18 @@ const ReviewAuthor = styled.div`
     }
 `
 
-const Controls = styled.div``
-
 const PreviousButton = styled.a`
-    position: absolute;
-    left: -90px;
-    top: 35%;
     cursor: pointer;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    @media (max-width: 1024px) {
-        left: -50px;
-    }
 `
 
 const NextButton = styled.a`
-    position: absolute;
-    right: -80px;
-    top: 35%;
     cursor: pointer;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    @media (max-width: 1024px) {
-        right: -50px;
-    }
 `
 
 const Review = ({ reviews }) => {
@@ -87,25 +83,27 @@ const Review = ({ reviews }) => {
 
     return (
         <ReviewContainer>
-        <Title>Les avis des clients</Title>
-        <ReviewContent>&apos;{review.quote}&apos;</ReviewContent>
-        <ReviewAuthor>
-            <div>- {review.name}</div>
-        </ReviewAuthor>
-        <Controls>
-            <PreviousButton
-            disabled={currentQuoteIndex === 0}
-            onClick={prevQuote}
-            >
-            <FontAwesomeIcon icon={faChevronLeft} size='2x' />
-            </PreviousButton>
-            <NextButton
-            disabled={currentQuoteIndex === reviews.length - 1}
-            onClick={nextQuote}
-            >
-            <FontAwesomeIcon icon={faChevronRight} size='2x' />
-            </NextButton>
-        </Controls>
+            <Title>Les avis des clients</Title>
+            <Wrapper>
+                <PreviousButton
+                    disabled={currentQuoteIndex === 0}
+                    onClick={prevQuote}
+                >
+                <FontAwesomeIcon icon={faChevronLeft} size='2x' />
+                </PreviousButton>
+                <TestimonialWrapper>
+                    <ReviewContent>&apos;{review.quote}&apos;</ReviewContent>
+                    <ReviewAuthor>
+                        <div>- {review.name}</div>
+                    </ReviewAuthor>
+                </TestimonialWrapper>
+                <NextButton
+                disabled={currentQuoteIndex === reviews.length - 1}
+                onClick={nextQuote}
+                >
+                <FontAwesomeIcon icon={faChevronRight} size='2x' />
+                </NextButton>
+            </Wrapper>
         </ReviewContainer>
     );
 };
