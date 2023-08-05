@@ -95,6 +95,7 @@ const PrimalStyledLink = styled(Link)`
     background-color: #538A82;
     padding: 10px 25px;
     border-radius: 15px;
+    border: 1px solid black;
     &:hover {
         background-color: #275e55;
         transform: scale(1.05);
