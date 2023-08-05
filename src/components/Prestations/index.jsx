@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import PrestationCard from "./PrestationCard";
+import colors from "../../colors";
 
 const data = [
     {
@@ -43,12 +44,17 @@ const data = [
 
 const Container = styled.section `
     width: 100%;
+    padding: 20px 0;
     max-width: 1300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
     text-align: center;
+    /* fullbleed effect */
+    background-color: ${colors.backgroundChange};
+    box-shadow: 0 0 0 100vmax ${colors.backgroundChange};
+    clip-path: inset(0 -100vmax);
 `
 
 const Wrapper = styled.div`
