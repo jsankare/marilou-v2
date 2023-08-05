@@ -79,9 +79,25 @@ const StyledLink = styled(Link)`
     font-size: 20px;
     font-weight: 400;
     transition: 0.2s;
-
     &:hover {
         color: #538A82;
+    }
+`;
+
+const PrimalStyledLink = styled(Link)`
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.2s;
+    background-color: #538A82;
+    padding: 10px 25px;
+    border-radius: 15px;
+    &:hover {
+        background-color: #275e55;
+        transform: scale(1.05);
     }
 `;
 
@@ -129,7 +145,7 @@ function Navigation() {
                     </li>
                 </LinkContainer>
                 <LinkContainer>
-                <StyledLink href="/estimate">Devis</StyledLink>
+                <PrimalStyledLink href="/estimate">Devis</PrimalStyledLink>
                 </LinkContainer>
             </Desktop>
             <Mobile>
