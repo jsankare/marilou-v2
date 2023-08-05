@@ -23,26 +23,16 @@ const Content = styled.div`
     }
 `
 
-const Informations = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
-
-const Contact = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-`
-
 const Socials = styled.div`
     display: flex;
     gap: 10px;
-`
-
-const ContactTitle = styled.h4`
+    align-items: center;
+    @media (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     @media (max-width: 425px) {
-        display: none;
+        display: flex;
     }
 `
 
@@ -58,11 +48,10 @@ const Logo = styled.img`
 
 const Sitemap = styled.div`
     display: flex;
-    flex-direction: column;
     gap: 15px;
-    @media (max-width: 425px) {
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
     }
 `
 
@@ -94,18 +83,7 @@ const Footer = () => {
     return (
         <Container>
             <Content>
-                <Informations>
-                    <StyledLink href="/" ><Logo src="/images/logo.png" /></StyledLink>
-                    <Contact>
-                        <ContactTitle>Contact :</ContactTitle>
-                        <Socials>
-                            <StyledLink href="tel:0674802188" ><Icon src="/images/phone.png" /></StyledLink>
-                            <StyledLink href="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" /></StyledLink>
-                            <StyledLink href="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" /></StyledLink>
-                            <StyledLink href="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" /></StyledLink>
-                        </Socials>
-                    </Contact>
-                </Informations>
+                <StyledLink href="/" ><Logo src="/images/logo.png" /></StyledLink>
                 <Sitemap>
                     <StyledLink href="/" >Accueil</StyledLink>
                     <StyledLink href="/prestations" >Prestations</StyledLink>
@@ -115,6 +93,12 @@ const Footer = () => {
                     <StyledLink href="/#contact" >Contact</StyledLink>
                     <StyledLink href="/legal" >Conditions d&apos;utilisation</StyledLink>
                 </Sitemap>
+                <Socials>
+                    <StyledLink href="tel:0674802188" ><Icon src="/images/phone.png" /></StyledLink>
+                    <StyledLink href="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" /></StyledLink>
+                    <StyledLink href="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" /></StyledLink>
+                    <StyledLink href="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" /></StyledLink>
+                </Socials>
             </Content>
             <Dividor />
             <Rights>
