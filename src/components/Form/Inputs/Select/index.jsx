@@ -15,6 +15,9 @@ const StyledLabel = styled.label`
 const StyledSelect = styled.select`
     padding: 5px;
     font-size: 18px;
+    @media (max-width: 450px) {
+        font-size: 16px;
+    }
 `
 
 const StyledOption = styled.option``

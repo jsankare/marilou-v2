@@ -114,7 +114,7 @@ const ContactForm = () => {
                 <TextInput label="Téléphone" placeholder="0611121314" />
             </TwoWrapper>
             <OneWrapper>
-                <SelectInput label="La raison de votre message" placeholder="Choisissez la raison de votre message" name="reason" options={reason} />
+                <SelectInput label="La raison de votre message" placeholder="Choisissez ici" name="reason" options={reason} />
                 <RadioInput label="Vous avez entendu parler de Marilou grâce à :" name="fame" options={fame} />
                 <TextArea label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
             </OneWrapper>

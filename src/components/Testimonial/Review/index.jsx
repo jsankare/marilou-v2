@@ -37,7 +37,11 @@ const Wrapper = styled.div`
     gap: 15px;
 `
 
-const TestimonialWrapper = styled.div``
+const TestimonialWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`
 
 const ReviewContent = styled.div`
     font-size: 26px;
