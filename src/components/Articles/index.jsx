@@ -10,8 +10,8 @@ const articleData = [
       id: 1,
       image: "/images/beautiful-cat-portrait-close-up.jpg",
       title: "Le chat aussi a des besoins",
-      catchphrase: "",
-      link: "https://www.google.com"
+      catchphrase: "Toute vie a besoin de vie, c’est à dire de mouvements, de stimulations (sonores, visuelles, olfactives, sensitives), d’actions. En bref, qu’il se passe quelque chose.",
+      link: "https://chatsduquercy.fr/conseils/comportement/besoins-dun-chat/"
     },
     {
         id: 2,
