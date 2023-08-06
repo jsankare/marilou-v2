@@ -163,10 +163,13 @@ function Navigation() {
                         <StyledLink href="/prestations">Prestations</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/estimate">Devis</StyledLink>
+                        <StyledLink href="/gallery">Galerie</StyledLink>
                     </li>
                     <li>
                         <StyledLink href="/#contact">Contact</StyledLink>
+                    </li>
+                    <li>
+                        <StyledLink href="/estimate">Devis</StyledLink>
                     </li>
                 </Menu>
             </Mobile>
