@@ -6,7 +6,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 const ReviewContainer = styled.div`
     position: relative;
     width: 600px;
-    height: 250px;
+    height: auto;
     margin: 0 auto;
     text-align: center;
     display: flex;

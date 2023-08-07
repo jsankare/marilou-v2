@@ -4,7 +4,7 @@ import Review from './Review';
 
 const Container = styled.section`
     width: 80%;
-    max-width: 800px;
+    max-width: auto;
     margin: 0 auto;
     @media (max-width: 375px) {
         width: 70%;
@@ -33,6 +33,11 @@ const Testimonial = () => {
     {
       quote: `Marilou prend soin de mon chat à chaque fois que je pars en vacances, il est très bien choyé et heureux de la voir arriver pour profiter de ses câlins et de sa dose de croquettes. Je recommande vivement Marilou !`,
       name: `M. Pinna Stéphane`,
+      picture: ``,
+    },
+    {
+      quote: `J'ai employé marilou pour le service de remplacement élevage au mois de juillet. Marilou à été très à l'écoute de mes conseils, n'hésitait pas à me contacter pour certains conseils, ou observation durant le séjour. Ce qui m'a rassurée et permise de partir sereinement. Elle s'est adaptée au rhytme que j'avais avec mes loulous afin de ne pas les perturber. Je la recommande donc si vous avez besoins de vous absenter pour des expositions ou profiter de quelques moments en famille.`,
+      name: `Élevage Mme D’hayer`,
       picture: ``,
     },
   ];
