@@ -67,7 +67,7 @@ const Menu = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   @media (max-width: 1024px) {
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+    display: ${({ isopen }) => (isopen ? 'flex' : 'none')};
   }
 `;
 
@@ -152,7 +152,7 @@ function Navigation() {
             <Mobile>
                 <StyledLink href="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
                 <Burger src='/images/menu.png' onClick={toggleMenu} ref={menuRef} />
-                <Menu isOpen={isMenuOpen} >
+                <Menu isopen={isMenuOpen} >
                     <li>
                         <StyledLink href="/">Accueil</StyledLink>
                     </li>

@@ -33,9 +33,9 @@ const Answer = styled.div`
 
 const Dropdown = ({title, answer}) => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isopen, setIsOpen] = useState(false);
     const toggleDropdown = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(!isopen);
     };
 
     return (
@@ -44,7 +44,7 @@ const Dropdown = ({title, answer}) => {
             <Title> {title} </Title>
             <FontAwesomeIcon icon={faChevronDown} />
             </Question>
-            {isOpen && <Answer> {answer} </Answer> }
+            {isopen && <Answer> {answer} </Answer> }
             <Divider />
         </Container>
     );
