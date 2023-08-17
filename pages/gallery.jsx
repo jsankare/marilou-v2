@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 import Header from '../src/components/PageHero';
 import Head from "next/head";
 import GaleryImage from '../src/components/GaleryPicture';
@@ -60,8 +61,18 @@ const Wrapper = styled.div`
     gap: 15px;
 `
 
+const Form = styled.form`
+    display: grid;
+    gap: 20px;
+`
+
+const TitleInput = styled.input``
+
+const CaptionInput = styled.input``
+
+const ImgInput = styled.input``
+
 const Add = styled.button`
-    font-size: 26px;
     padding: 10px;
 `
 
@@ -73,7 +84,12 @@ const Gallery = () => {
             <title>Marilou - Galerie</title>
             </Head>
             <Header image="/images/dog_sunset.jpg" title="Galerie" subtitle="La photographie est un arrêt du cœur d'une fraction de seconde." author="Pierre Movila" />
-            <Add>Ajouter une photo</Add>
+            <Form>
+                <TitleInput type="text" placeholder='Titre' />
+                <CaptionInput type="text" placeholder='Caption' />
+                <ImgInput type="file" accept='.jpg,.jpeg.png' />
+                <Add>Ajouter une photo</Add>
+            </Form>
             <Wrapper>
                 {data.map((display) => (
                     <GaleryImage 
