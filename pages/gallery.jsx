@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Header from '../src/components/PageHero';
@@ -77,6 +77,17 @@ const Add = styled.button`
 `
 
 const Gallery = () => {
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/images')
+        .then(response => {
+            setImages(response.data);
+        })
+        .catch(error => {
+            console.error('Error fetching images:', error);
+        });
+    }, []);
 
     return (
         <Container>
@@ -91,9 +102,9 @@ const Gallery = () => {
                 <Add>Ajouter une photo</Add>
             </Form>
             <Wrapper>
-                {data.map((display) => (
+                {images.map((display) => (
                     <GaleryImage 
-                        key={display.id}
+                        key={display._id}
                         image={display.image}
                         title={display.title}
                         caption={display.caption}
