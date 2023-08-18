@@ -67,7 +67,7 @@ const Menu = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   @media (max-width: 1024px) {
-    display: ${({ isopen }) => (isopen ? 'flex' : 'none')};
+    display: ${({ isopen }) => (isopen === 'true' ? 'flex' : 'none')};
   }
 `;
 
@@ -107,22 +107,26 @@ function Navigation() {
     const menuRef = useRef(null)
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
+        setIsMenuOpen(!isMenuOpen);
+    };
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+    
     useEffect(() => {
         const handleOutsideClick = (event) => {
-            if(menuRef.current && !menuRef.current.contains(event.target))
-            setIsMenuOpen(false);
-        }
-
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
+        };
+    
         document.addEventListener('click', handleOutsideClick);
-
+    
         return () => {
             document.removeEventListener('click', handleOutsideClick);
-        }
-
-    })
+        };
+    }, []);
 
     return (
         <BannerContainer>
@@ -151,25 +155,25 @@ function Navigation() {
             </Desktop>
             <Mobile>
                 <StyledLink href="/"><Logo src={logo} alt="Marilou logo" /></StyledLink>
-                <Burger src='/images/menu.png' onClick={toggleMenu} ref={menuRef} />
-                <Menu isopen={isMenuOpen} >
+                <Burger src='/images/menu.png' onClick={toggleMenu} />
+                <Menu isopen={isMenuOpen.toString()}>
                     <li>
-                        <StyledLink href="/">Accueil</StyledLink>
+                        <StyledLink href="/" onClick={closeMenu}>Accueil</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/values">Nos valeurs</StyledLink>
+                        <StyledLink href="/values" onClick={closeMenu}>Nos valeurs</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/prestations">Prestations</StyledLink>
+                        <StyledLink href="/prestations" onClick={closeMenu}>Prestations</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/gallery">Galerie</StyledLink>
+                        <StyledLink href="/gallery" onClick={closeMenu}>Galerie</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/#contact">Contact</StyledLink>
+                        <StyledLink href="/#contact" onClick={closeMenu}>Contact</StyledLink>
                     </li>
                     <li>
-                        <StyledLink href="/estimate">Devis</StyledLink>
+                        <StyledLink href="/estimate" onClick={closeMenu}>Devis</StyledLink>
                     </li>
                 </Menu>
             </Mobile>

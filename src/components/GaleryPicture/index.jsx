@@ -10,6 +10,7 @@ const Container = styled.div`
 
 const StyledImage = styled.img`
     width: 100%;
+    height: 100%;
 `
 
 const Caption = styled.p`
@@ -22,22 +23,24 @@ const Wrapper = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: contain;
 `
 
-const Delete = styled.div`
-    width: 10px;
-    height: 10px;
-    background-color: red;
-`
+const Buttons = styled.div``
 
-const GaleryImage = ({image, caption}) => {
+const GaleryImage = ({image, caption, id, onDelete}) => {
     return (
         <Container>
             <Wrapper>
                 <StyledImage src={image} />
                 <Caption>{caption}</Caption>
             </Wrapper>
-            <Delete />
+            <Buttons>
+                <button onClick={() => onDelete(id)}>Delete</button>
+            </Buttons>
         </Container>
     );
 };
