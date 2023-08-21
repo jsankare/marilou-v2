@@ -59,7 +59,7 @@ const Gallery = () => {
         
         try {
             const response = await axios.post('http://localhost:3001/images', formData);
-            setImages([...images, response.data]);
+            setImages([...images, `http://localhost:3001/${response.data}`]);
             setTitle('');
             setCaption('');
             setImageFile(null);
@@ -79,13 +79,16 @@ const Gallery = () => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:3001/images')
-        .then(response => {
-            setImages(response.data);
-        })
-        .catch(error => {
-            console.error('Error fetching images:', error);
-        });
+        const fetchImages = async () => {
+            try {
+                const response = await axios.get('http://localhost:3001/images')
+                setImages(response.data.map(element => ({...element, image:`http://localhost:3001/${element.image}`})));
+            }
+            catch(error) {
+                console.error('Error fetching images:', error);
+            };
+        }
+        fetchImages();
     }, []);
 
     return (

@@ -47,8 +47,9 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [authenticated, setAuthenticated] = useState(false);
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
+    const handleLogin = async (event) => {
+        event.preventDefault();
+        console.log('totologin')
 
         try {
             const response = await axios.post('http://localhost:3001/login', {
@@ -56,14 +57,16 @@ const Login = () => {
                 password,
             });
             console.log(response.data)
-            setAuthenticated(true);
-            router.push('/');
+            // setAuthenticated(true);
+            // router.push('/');
         } catch (error) {
             console.error('Error during login:', error);
         }
     }
 
-    const handleLogout = async () => {
+    const handleLogout = async (event) => {
+        event.preventDefault();
+        console.log('totologout')
         try {
             const response = await axios.post('http://localhost:3001/logout');
 

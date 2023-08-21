@@ -91,7 +91,7 @@ const Footer = () => {
                     <StyledLink href="/gallery" >Galerie</StyledLink>
                     <StyledLink href="/estimate" >Devis</StyledLink>
                     <StyledLink href="/#contact" >Contact</StyledLink>
-                    <StyledLink href="/login">Connexion</StyledLink>
+                    {/* <StyledLink href="/login">Connexion</StyledLink> */}
                     <StyledLink href="/legal" >Conditions d&apos;utilisation</StyledLink>
                 </Sitemap>
                 <Socials>

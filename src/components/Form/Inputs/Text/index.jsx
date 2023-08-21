@@ -17,11 +17,12 @@ const StyledInput = styled.input`
     font-size: 18px;
 `
 
-const Text = ({label, name, placeholder}) => {
+const Text = (props) => {
+    const {label, name, placeholder} = props
     return (
         <Container>
             <StyledLabel  htmlFor={name} >{label}</StyledLabel>
-            <StyledInput type="text" id={name} name={name} placeholder={placeholder} />
+            <StyledInput {...props} id={name} name={name} placeholder={placeholder} />
         </Container>
     );
 };
