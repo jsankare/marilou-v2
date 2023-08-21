@@ -44,6 +44,8 @@ const Add = styled.button`
 `
 
 const Gallery = () => {
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
+
     const [images, setImages] = useState([]);
     const [title, setTitle] = useState('');
     const [caption, setCaption] = useState('');
@@ -58,8 +60,8 @@ const Gallery = () => {
         formData.append('image', imageFile);
         
         try {
-            const response = await axios.post('http://localhost:3001/images', formData);
-            setImages([...images, `http://localhost:3001/${response.data}`]);
+            const response = await axios.post(`${backendUrl}/images`, formData);
+            setImages([...images, `${backendUrl}/${response.data}`]);
             setTitle('');
             setCaption('');
             setImageFile(null);
@@ -70,7 +72,7 @@ const Gallery = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/images/${id}`)
+            await axios.delete(`${backendUrl}/images/${id}`)
             const updatedImages = images.filter(image => image._id !==id);
             setImages(updatedImages)
         } catch (error) {
@@ -81,8 +83,8 @@ const Gallery = () => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/images')
-                setImages(response.data.map(element => ({...element, image:`http://localhost:3001/${element.image}`})));
+                const response = await axios.get(`${backendUrl}/images`)
+                setImages(response.data.map(element => ({...element, image:`${backendUrl}/${element.image}`})));
             }
             catch(error) {
                 console.error('Error fetching images:', error);

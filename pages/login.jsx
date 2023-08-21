@@ -41,6 +41,7 @@ const Inputs = styled.div`
 `
 
 const Login = () => {
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
     const router = useRouter();
 
     const [username, setUsername] = useState("");
@@ -52,7 +53,7 @@ const Login = () => {
         console.log('totologin')
 
         try {
-            const response = await axios.post('http://localhost:3001/login', {
+            const response = await axios.post(`${backendUrl}/login`, {
                 username,
                 password,
             });
@@ -68,7 +69,7 @@ const Login = () => {
         event.preventDefault();
         console.log('totologout')
         try {
-            const response = await axios.post('http://localhost:3001/logout');
+            const response = await axios.post(`${backendUrl}/logout`);
 
             console.log('Logout successful:', response.data);
             setAuthenticated(false);
