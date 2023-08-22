@@ -63,7 +63,8 @@ const Gallery = () => {
         
         try {
             const response = await axios.post(`${backendUrl}/images`, formData, {headers: {Authorization: `Bearer ${token}` }});
-            setImages([...images, `${backendUrl}/${response.data}`]);
+            const data = {...response.data, image:`${backendUrl}/${response.data.image}`}
+            setImages([...images, data]);
             setTitle('');
             setCaption('');
             setImageFile(null);
