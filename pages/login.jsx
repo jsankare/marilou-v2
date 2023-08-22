@@ -57,9 +57,8 @@ const Login = () => {
                 username,
                 password,
             });
-            console.log(response.data)
-            // setAuthenticated(true);
-            // router.push('/');
+            localStorage.setItem("authenticatedUser", response.data.token)
+            router.push('/');
         } catch (error) {
             console.error('Error during login:', error);
         }
