@@ -75,6 +75,10 @@ const NextButton = styled.a`
 const Review = ({ reviews }) => {
     const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
+    if (!reviews || reviews.lenght === 0) {
+        return <div>No reviews Available</div>
+    }
+
     const prevQuote = () => {
         setCurrentQuoteIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
     };
@@ -84,6 +88,10 @@ const Review = ({ reviews }) => {
     };
 
     const review = reviews[currentQuoteIndex];
+
+    if (!review) {
+        return <div>No review available.</div>;
+    }
 
     return (
         <ReviewContainer>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Review from './Review';
+import axios from 'axios';
 
 const Container = styled.section`
     width: 80%;
@@ -10,43 +11,91 @@ const Container = styled.section`
         width: 70%;
         margin: 0 auto;
     }
-  `
+`
+
+const Form = styled.form`
+    display: grid;
+    gap: 20px;
+`
+
+const NameInput = styled.input``
+
+const QuoteInput = styled.input``
+
+const Add = styled.button`
+    padding: 10px;
+`
 
 const Testimonial = () => {
 
-  const reviews = [
-    {
-      quote: `Merci à Marilou pour son sérieux, son professionnalisme, nous avons eu besoin de ses services un week-end et tout a été très bien pour nos deux whippets . Merci encore et certainement à très bientôt.`,
-      name: "Cathy & Sylvain",
-      picture: ``,
-    },
-    {
-        quote: `Je suis plus que satisfaite de Marilou qui est entièrement disponible et dévouée pour mes loulous. Elle est surtout très douce et très professionnelle. Je la remercie grandement pour ce qu’elle fait.`,
-        name: `Adeline Colombier`,
-        picture: ``,
-    },
-    {
-      quote: `Excellente prestation. Marilou est une personne de confiance et sympathique, mon chien était très heureux, on recommande !`,
-      name: `Mme Delachanal`,
-      picture: ``,
-    },
-    {
-      quote: `Marilou prend soin de mon chat à chaque fois que je pars en vacances, il est très bien choyé et heureux de la voir arriver pour profiter de ses câlins et de sa dose de croquettes. Je recommande vivement Marilou !`,
-      name: `M. Pinna Stéphane`,
-      picture: ``,
-    },
-    {
-      quote: `J'ai employé marilou pour le service de remplacement élevage au mois de juillet. Marilou à été très à l'écoute de mes conseils, n'hésitait pas à me contacter pour certains conseils, ou observation durant le séjour. Ce qui m'a rassurée et permise de partir sereinement. Elle s'est adaptée au rhytme que j'avais avec mes loulous afin de ne pas les perturber. Je la recommande donc si vous avez besoins de vous absenter pour des expositions ou profiter de quelques moments en famille.`,
-      name: `Élevage Mme D’hayer`,
-      picture: ``,
-    },
-  ];
+    const [token, setToken] = useState(null)
+    const [reviews, setReviews] = useState([])
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 
-  return (
-    <Container>
-      <Review reviews={reviews} />
-    </Container>
-  );
+    const [author, setAuthor] = useState('');
+    const [quote, setQuote] = useState('');
+
+    useEffect(() => {
+        const token = localStorage.getItem("authenticatedUser")
+        if (token != null) {
+            setToken(token)
+        }
+    }, []);
+
+    useEffect(() => {
+        const fetchReviews = async () => {
+            try {
+                const response = await axios.get(`${backendUrl}/reviews`)
+                setReviews(response.data.map(element => ({...element, review:`${backendUrl}/${element.review}`})));
+            }
+            catch(error) {
+                console.error('Error fetching review:', error);
+            };
+        }
+        fetchReviews();
+    }, []);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append('name', author);
+        formData.append('quote', quote);
+
+        try {
+            const response = await axios.post(`${backendUrl}/reviews`, formData);
+            const data = response.data;
+            setReviews([...reviews, data]);
+            setAuthor('');
+            setQuote('');
+        } catch (error) {
+            console.error('Error uploading review', error)
+        }
+    } 
+
+    return (
+        <Container>
+            <Review reviews={reviews} />
+            {
+                token != null && 
+                <Form onSubmit={handleSubmit}>
+                    <NameInput
+                        type="text"
+                        placeholder="Nom"
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)}
+                    />
+                    <QuoteInput
+                        type="text"
+                        placeholder="Avis"
+                        value={quote}
+                        onChange={(e) => setQuote(e.target.value)}
+                    />
+                    <Add type="submit">Ajouter un avis</Add>
+                </Form>
+            }
+        </Container>
+    );
 };
 
 export default Testimonial;

@@ -39,7 +39,7 @@ const GaleryImage = ({image, caption, id, onDelete}) => {
                 <Caption>{caption}</Caption>
             </Wrapper>
             <Buttons>
-                <button onClick={() => onDelete(id)}>Delete</button>
+                <button onClick={() => onDelete(id)}>Supprimer</button>
             </Buttons>
         </Container>
     );
