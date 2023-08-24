@@ -43,7 +43,7 @@ const TestimonialWrapper = styled.div`
     gap: 10px;
 `
 
-const ReviewContent = styled.div`
+const ReviewContent = styled.p`
     font-size: 26px;
     font-weight: 500;
     @media (max-width: 1024px) {
@@ -51,28 +51,28 @@ const ReviewContent = styled.div`
     }
 `
 
-const ReviewAuthor = styled.div`
+const ReviewAuthor = styled.span`
     font-size: 18px;
     @media (max-width: 1024px) {
         font-size: 14px;
     }
 `
 
-const PreviousButton = styled.a`
+const PreviousButton = styled.button`
     cursor: pointer;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 `
 
-const NextButton = styled.a`
+const NextButton = styled.button`
     cursor: pointer;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 `
 
-const Review = ({ reviews }) => {
+const Review = ({ reviews, id, onDelete }) => {
     const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
     if (!reviews || reviews.lenght === 0) {
@@ -105,9 +105,7 @@ const Review = ({ reviews }) => {
                 </PreviousButton>
                 <TestimonialWrapper>
                     <ReviewContent>&apos;{review.quote}&apos;</ReviewContent>
-                    <ReviewAuthor>
-                        <div>- {review.name}</div>
-                    </ReviewAuthor>
+                    <ReviewAuthor>- {review.name}</ReviewAuthor>
                 </TestimonialWrapper>
                 <NextButton
                 disabled={currentQuoteIndex === reviews.length - 1}
@@ -116,6 +114,7 @@ const Review = ({ reviews }) => {
                 <FontAwesomeIcon icon={faChevronRight} size='2x' />
                 </NextButton>
             </Wrapper>
+            <button onClick={() => onDelete(review._id)}>Supprimer</button>
         </ReviewContainer>
     );
 };

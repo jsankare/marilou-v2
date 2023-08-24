@@ -29,8 +29,6 @@ const Wrapper = styled.div`
     object-fit: contain;
 `
 
-const Buttons = styled.div``
-
 const GaleryImage = ({image, caption, id, onDelete}) => {
     return (
         <Container>
@@ -38,9 +36,7 @@ const GaleryImage = ({image, caption, id, onDelete}) => {
                 <StyledImage src={image} />
                 <Caption>{caption}</Caption>
             </Wrapper>
-            <Buttons>
-                <button onClick={() => onDelete(id)}>Supprimer</button>
-            </Buttons>
+            <button onClick={() => onDelete(id)}>Supprimer</button>
         </Container>
     );
 };

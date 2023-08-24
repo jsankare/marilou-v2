@@ -58,12 +58,8 @@ const Testimonial = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const formData = new FormData();
-        formData.append('name', author);
-        formData.append('quote', quote);
-
         try {
-            const response = await axios.post(`${backendUrl}/reviews`, formData);
+            const response = await axios.post(`${backendUrl}/reviews`, {name: author, quote}, {headers: {Authorization: `Bearer ${token}` }});
             const data = response.data;
             setReviews([...reviews, data]);
             setAuthor('');
@@ -73,9 +69,22 @@ const Testimonial = () => {
         }
     } 
 
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`${backendUrl}/reviews/${id}`, {headers: {Authorization: `Bearer ${token}` }})
+            setReviews(reviews.filter(review => review._id !== id))
+            window.location.reload(false)
+        } catch (error) {
+            console.error('Error deleting review', error)
+        }
+    }
+
     return (
         <Container>
-            <Review reviews={reviews} />
+            <Review 
+            reviews={reviews}
+            onDelete={(reviewId) => handleDelete(reviewId)}
+            />
             {
                 token != null && 
                 <Form onSubmit={handleSubmit}>

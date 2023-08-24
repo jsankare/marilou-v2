@@ -76,8 +76,7 @@ const Gallery = () => {
     const handleDelete = async (id) => {
         try {
             await axios.delete(`${backendUrl}/images/${id}`, {headers: {Authorization: `Bearer ${token}` }})
-            const updatedImages = images.filter(image => image._id !==id);
-            setImages(updatedImages)
+            setImages(images.filter(image => image._id !== id))
         } catch (error) {
             console.error('Error deleting image', error)
         }
