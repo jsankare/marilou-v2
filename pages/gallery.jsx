@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import Header from '../src/components/PageHero';
 import Head from "next/head";
-import GaleryPicture from '../src/components/GaleryPicture';
+import GaleryImage from '../src/components/GaleryImage';
 
 const Container = styled.section`
     display: flex;
@@ -14,18 +14,12 @@ const Container = styled.section`
 `
 
 const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     gap: 15px;
-    @media (max-width: 1024px) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0 auto;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 `
 
 const Form = styled.form`
@@ -134,13 +128,14 @@ const Gallery = () => {
             }
             <Wrapper>
                 {images.map((display) => (
-                    <GaleryPicture
+                    <GaleryImage
                         key={display._id}
                         id={display._id}
                         image={display.image}
                         title={display.title}
                         caption={display.caption}
-                        onDelete={handleDelete}
+                        token={token}
+                        onDelete={() => handleDelete(display._id)}
                     />
                 ))}
             </Wrapper>

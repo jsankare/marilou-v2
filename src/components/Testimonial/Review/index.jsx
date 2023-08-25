@@ -15,6 +15,7 @@ const ReviewContainer = styled.div`
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    align-items: center;
     @media (max-width: 1024px) {
         width: 400px;
         height: auto;
@@ -77,7 +78,7 @@ const DeleteButton = styled.button`
     max-width: fit-content;
 `
 
-const Review = ({ reviews, id, onDelete, token }) => {
+const Review = ({ reviews, onDelete, token }) => {
     const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
     if (!reviews || reviews.lenght === 0) {

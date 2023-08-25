@@ -7,6 +7,10 @@ const Container = styled.section`
     width: 80%;
     max-width: auto;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
     @media (max-width: 375px) {
         width: 70%;
         margin: 0 auto;
@@ -15,11 +19,14 @@ const Container = styled.section`
 
 const Form = styled.form`
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
 `
 
 const NameInput = styled.input``
 
-const QuoteInput = styled.input``
+const QuoteInput = styled.textarea``
 
 const Add = styled.button`
     padding: 10px;
@@ -95,7 +102,6 @@ const Testimonial = () => {
                         onChange={(e) => setAuthor(e.target.value)}
                     />
                     <QuoteInput
-                        type="textarea"
                         placeholder="Avis"
                         value={quote}
                         onChange={(e) => setQuote(e.target.value)}

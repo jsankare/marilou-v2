@@ -6,6 +6,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 5px;
+    align-items: center;
 `
 
 const StyledImage = styled.img`
@@ -29,14 +30,23 @@ const Wrapper = styled.div`
     object-fit: contain;
 `
 
-const GaleryImage = ({image, caption, id, onDelete}) => {
+const Delete = styled.button`
+    width: 100%;
+    max-width: fit-content;
+`
+
+const GaleryImage = ({ image, caption, token, onDelete }) => {
     return (
         <Container>
             <Wrapper>
                 <StyledImage src={image} />
                 <Caption>{caption}</Caption>
             </Wrapper>
-            <button onClick={() => onDelete(id)}>Supprimer</button>
+            {
+                token && (
+                    <Delete onClick={() => onDelete(image._id)}>Supprimer</Delete>
+                )
+            }
         </Container>
     );
 };
