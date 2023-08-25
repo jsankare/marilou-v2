@@ -72,7 +72,12 @@ const NextButton = styled.button`
     user-select: none;
 `
 
-const Review = ({ reviews, id, onDelete }) => {
+const DeleteButton = styled.button`
+    width: 100%;
+    max-width: fit-content;
+`
+
+const Review = ({ reviews, id, onDelete, token }) => {
     const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
     if (!reviews || reviews.lenght === 0) {
@@ -114,7 +119,11 @@ const Review = ({ reviews, id, onDelete }) => {
                 <FontAwesomeIcon icon={faChevronRight} size='2x' />
                 </NextButton>
             </Wrapper>
-            <button onClick={() => onDelete(review._id)}>Supprimer</button>
+            {
+                token && (
+                    <DeleteButton onClick={() => onDelete(review._id)}>Supprimer</DeleteButton>
+                )
+            }
         </ReviewContainer>
     );
 };

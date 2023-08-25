@@ -14,8 +14,7 @@ const Container = styled.section`
 `
 
 const Form = styled.form`
-    display: grid;
-    gap: 20px;
+    display: flex;
 `
 
 const NameInput = styled.input``
@@ -84,6 +83,7 @@ const Testimonial = () => {
             <Review 
             reviews={reviews}
             onDelete={(reviewId) => handleDelete(reviewId)}
+            token={token}
             />
             {
                 token != null && 
@@ -95,7 +95,7 @@ const Testimonial = () => {
                         onChange={(e) => setAuthor(e.target.value)}
                     />
                     <QuoteInput
-                        type="text"
+                        type="textarea"
                         placeholder="Avis"
                         value={quote}
                         onChange={(e) => setQuote(e.target.value)}
