@@ -24,12 +24,21 @@ const Form = styled.form`
     width: 100%;
 `
 
-const NameInput = styled.input``
+const NameInput = styled.input`
+    padding: 10px;
+    font-size: 16px;
+`
 
-const QuoteInput = styled.textarea``
+const QuoteInput = styled.textarea`
+    padding: 10px;
+    font-size: 16px;
+`
 
 const Add = styled.button`
-    padding: 10px;
+    padding: 5px 10px;
+    border-radius:10px;
+    font-size: 16px;
+    background-color: #538a82;
 `
 
 const Testimonial = () => {

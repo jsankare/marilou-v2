@@ -10,7 +10,7 @@ const Container = styled.section`
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    gap: 10px;
+    gap: 20px;
 `
 
 const Wrapper = styled.div`
@@ -24,17 +24,29 @@ const Wrapper = styled.div`
 
 const Form = styled.form`
     display: grid;
-    gap: 20px;
+    gap: 10px;
 `
 
-const TitleInput = styled.input``
+const TitleInput = styled.input`
+    padding: 10px;
+    font-size: 16px;
+`
 
-const CaptionInput = styled.input``
+const CaptionInput = styled.input`
+    padding: 10px;
+    font-size: 16px;
+`
 
-const ImgInput = styled.input``
+const ImgInput = styled.input`
+    padding: 10px;
+    font-size: 16px;
+`
 
 const Add = styled.button`
-    padding: 10px;
+    padding: 5px 10px;
+    border-radius:10px;
+    font-size: 16px;
+    background-color: #538a82;
 `
 
 const Gallery = () => {
@@ -114,7 +126,7 @@ const Gallery = () => {
                     />
                     <CaptionInput
                         type="text"
-                        placeholder="Caption"
+                        placeholder="Légende | Texte"
                         value={caption}
                         onChange={(e) => setCaption(e.target.value)}
                     />

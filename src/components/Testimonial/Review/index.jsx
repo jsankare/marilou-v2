@@ -64,6 +64,8 @@ const PreviousButton = styled.button`
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    background-color: white;
+    border: none;
 `
 
 const NextButton = styled.button`
@@ -71,11 +73,17 @@ const NextButton = styled.button`
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    background-color: white;
+    border: none;
 `
 
 const DeleteButton = styled.button`
     width: 100%;
     max-width: fit-content;
+    padding: 10px;
+    border-radius: 5px 10px;
+    font-size: 16px;
+    background-color: #538a82;
 `
 
 const Review = ({ reviews, onDelete, token }) => {

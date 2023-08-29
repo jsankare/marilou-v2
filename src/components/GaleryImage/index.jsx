@@ -33,6 +33,10 @@ const Wrapper = styled.div`
 const Delete = styled.button`
     width: 100%;
     max-width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #538a82;
 `
 
 const GaleryImage = ({ image, caption, token, onDelete }) => {

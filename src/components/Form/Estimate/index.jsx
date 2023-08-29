@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from 'styled-components';
 import TextInput from '../Inputs/Text';
 import SelectInput from '../Inputs/Select';
@@ -55,7 +55,7 @@ const Heading = styled.div`
     align-items: center;
 `
 
-const OneWrapper = styled.form`
+const OneWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 50px;
@@ -65,7 +65,7 @@ const OneWrapper = styled.form`
     align-items: center;
 `
 
-const TwoWrapper = styled.form`
+const TwoWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
@@ -77,7 +77,7 @@ const TwoWrapper = styled.form`
     }
 `
 
-const ThreeWrapper = styled.form`
+const ThreeWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
@@ -100,41 +100,90 @@ const Title = styled.h2`
     }
 `
 
+const FormWrapper = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    @media (max-width: 1024px) {
+        width: 80%;
+        margin: 0;
+    }
+    @media (max-width: 375px) {
+        width: 70%;
+    }
+`
+
 const ContactForm = () => {
+
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        address: "",
+        city: "",
+        postalCode: "",
+        email: "",
+        phone: "",
+        reason: "",
+        fame: "",
+        message: ""
+    });
+
+    const handleChange = (name, value) => {
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+            console.log(`it's really happening`)
+        } catch (error) {
+            console.error('An error occurred:', error);
+        }
+    };
+
     return (
         <Container>
             <Heading>
                 <Title>Demander un devis</Title>
             </Heading>
-            <TwoWrapper>
-                <TextInput label="Prénom" placeholder="Martine" />
-                <TextInput label="Nom" placeholder="Dupuis" />
-            </TwoWrapper>
-            <ThreeWrapper>
-                <TextInput label="Adresse" placeholder="5 rue Montaigne" />
-                <TextInput label="Ville" placeholder="Paris" />
-                <TextInput label="Code postal" placeholder="75015" />
-            </ThreeWrapper>
-            <TwoWrapper>
-                <TextInput label="Email" placeholder="exemple@mail.com" />
-                <TextInput label="Téléphone" placeholder="0611121314" />
-                <RadioInput label="Vous êtes :" name="status" options={status} />
-                <NumberInput label="Nombre d'animaux à garder" name="number" placeholder="1, 5, 10 .." />
-            </TwoWrapper>
-            <TwoWrapper>
-                <SelectInput label="Le type d'animal concerné" placeholder="Choisissez ici" name="race" options={race} />
-                <SelectInput label="Votre prestation choisie" placeholder="Choisissez ici" name="prestation" options={prestation} />
-            </TwoWrapper>
-            <TwoWrapper>
-            <DateInput label="Date de début de garde" />
-                <DateInput label="Date de fin de garde" />
-            </TwoWrapper>
-            <OneWrapper>
-                <TextArea label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
-            </OneWrapper>
-            <ConfirmWrapper>
-                <Validate text="Demander mon devis" />
-            </ConfirmWrapper>
+            <FormWrapper onSubmit={handleSubmit} >
+                <TwoWrapper>
+                    <TextInput label="Prénom" placeholder="Martine" />
+                    <TextInput label="Nom" placeholder="Dupuis" />
+                </TwoWrapper>
+                <ThreeWrapper>
+                    <TextInput label="Adresse" placeholder="5 rue Montaigne" />
+                    <TextInput label="Ville" placeholder="Paris" />
+                    <TextInput label="Code postal" placeholder="75015" />
+                </ThreeWrapper>
+                <TwoWrapper>
+                    <TextInput label="Email" placeholder="exemple@mail.com" />
+                    <TextInput label="Téléphone" placeholder="0611121314" />
+                    <RadioInput label="Vous êtes :" name="status" options={status} />
+                    <NumberInput label="Nombre d'animaux à garder" name="number" placeholder="1, 5, 10 .." />
+                </TwoWrapper>
+                <TwoWrapper>
+                    <SelectInput label="Le type d'animal concerné" placeholder="Choisissez ici" name="race" options={race} />
+                    <SelectInput label="Votre prestation choisie" placeholder="Choisissez ici" name="prestation" options={prestation} />
+                </TwoWrapper>
+                <TwoWrapper>
+                <DateInput label="Date de début de garde" />
+                    <DateInput label="Date de fin de garde" />
+                </TwoWrapper>
+                <OneWrapper>
+                    <TextArea label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
+                </OneWrapper>
+                <ConfirmWrapper>
+                    <Validate text="Demander mon devis" type="submit" />
+                </ConfirmWrapper>
+            </FormWrapper>
         </Container>
     );
 };
