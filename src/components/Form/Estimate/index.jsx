@@ -3,33 +3,34 @@ import styled from 'styled-components';
 import TextInput from '../Inputs/Text';
 import SelectInput from '../Inputs/Select';
 import RadioInput from "../Inputs/Radio";
-import DateInput from "../Inputs/Date"
-import NumberInput from "../Inputs/Number"
-import TextArea from "../Inputs/TextArea"
+import DateInput from "../Inputs/Date";
+import NumberInput from "../Inputs/Number";
+import TextArea from "../Inputs/TextArea";
 import Validate from "../Inputs/Validate";
+import axios from 'axios';
 
 const status = [
-    { value: "company", label: "Une entreprise" },
-    { value: "person", label: "Un particulier" },
+    { value: "Entreprise", label: "Une entreprise" },
+    { value: "Particulier", label: "Un particulier" },
   ];
 
 const race = [
-    { value: "felids", label: "Chat" },
-    { value: "canidae", label: "Chien" },
-    { value: "felicani", label: "Chien & chat" },
-    { value: "others", label: "Autre (précisez dans le message)" },
+    { value: "Chat", label: "Chat" },
+    { value: "Chien", label: "Chien" },
+    { value: "Chien & Chat", label: "Chien & chat" },
+    { value: "Autre", label: "Autre (précisez dans le message)" },
 ];
 
 const prestation = [
-    { value: "walk15", label: "Promenade(s) - 15mn" },
-    { value: "walk30", label: "Promenade(s) - 30mn" },
-    { value: "walk45", label: "Promenade(s) - 45mn" },
-    { value: "walk60", label: "Promenade(s) - 60mn" },
-    { value: "visit", label: "Visite(s)" },
-    { value: "walkandvisit", label: "Promenade(s) & visite(s)"},
-    { value: "week1", label: "Forfait(s) - 1 semaine" },
-    { value: "week2", label: "Forfait(s) - 2 semaines" },
-    { value: "month", label: "Forfait(s) - 1 mois" },
+    { value: "Promenade(s) - 15mn", label: "Promenade(s) - 15mn" },
+    { value: "Promenade(s) - 30mn", label: "Promenade(s) - 30mn" },
+    { value: "Promenade(s) - 45mn", label: "Promenade(s) - 45mn" },
+    { value: "Promenade(s) - 60mn", label: "Promenade(s) - 60mn" },
+    { value: "Visite(s)", label: "Visite(s)" },
+    { value: "Promenade(s) & visite(s", label: "Promenade(s) & visite(s)"},
+    { value: "Forfait(s) - 1 semaine", label: "Forfait(s) - 1 semaine" },
+    { value: "Forfait(s) - 2 semaines", label: "Forfait(s) - 2 semaines" },
+    { value: "Forfait(s) - 1 mois", label: "Forfait(s) - 1 mois" },
 ]
 
 const Container = styled.section`
@@ -117,21 +118,28 @@ const FormWrapper = styled.form`
 `
 
 const ContactForm = () => {
+    
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
-        address: "",
-        city: "",
-        postalCode: "",
-        email: "",
-        phone: "",
-        reason: "",
-        fame: "",
-        message: ""
+        Prénom: "",
+        Nom: "",
+        Adresse: "",
+        Ville: "",
+        Zip: "",
+        Email: "",
+        Téléphone: "",
+        Statut: "",
+        Nombre: "",
+        Race: "",
+        Prestation: "",
+        Début: "",
+        Fin: "",
+        Message: ""
     });
 
-    const handleChange = (name, value) => {
+    const handleChange = (event) => {
+        const {name, value} = event.target
         setFormData(prevData => ({
             ...prevData,
             [name]: value
@@ -139,10 +147,12 @@ const ContactForm = () => {
     };
 
     const handleSubmit = async (event) => {
+
         event.preventDefault();
-    
+
         try {
-            console.log(`it's really happening`)
+            const response = await axios.post(`${backendUrl}/contact`, formData);
+            console.log("Form data sent:", response.data);
         } catch (error) {
             console.error('An error occurred:', error);
         }
@@ -155,30 +165,30 @@ const ContactForm = () => {
             </Heading>
             <FormWrapper onSubmit={handleSubmit} >
                 <TwoWrapper>
-                    <TextInput label="Prénom" placeholder="Martine" />
-                    <TextInput label="Nom" placeholder="Dupuis" />
+                    <TextInput name="Prénom" label="Prénom" placeholder="Martine" onChange={handleChange} />
+                    <TextInput name="Nom" label="Nom" placeholder="Dupuis" onChange={handleChange} />
                 </TwoWrapper>
                 <ThreeWrapper>
-                    <TextInput label="Adresse" placeholder="5 rue Montaigne" />
-                    <TextInput label="Ville" placeholder="Paris" />
-                    <TextInput label="Code postal" placeholder="75015" />
+                    <TextInput name="Adresse" label="Adresse" placeholder="5 rue Montaigne" onChange={handleChange} />
+                    <TextInput name="Ville" label="Ville" placeholder="Paris" onChange={handleChange} />
+                    <TextInput name="Zip" label="Code postal" placeholder="75015" onChange={handleChange} />
                 </ThreeWrapper>
                 <TwoWrapper>
-                    <TextInput label="Email" placeholder="exemple@mail.com" />
-                    <TextInput label="Téléphone" placeholder="0611121314" />
-                    <RadioInput label="Vous êtes :" name="status" options={status} />
-                    <NumberInput label="Nombre d'animaux à garder" name="number" placeholder="1, 5, 10 .." />
+                    <TextInput name="Email" label="Email" placeholder="exemple@mail.com" onChange={handleChange} />
+                    <TextInput name="Téléphone" label="Téléphone" placeholder="0611121314" onChange={handleChange} />
+                    <RadioInput name="Statut" label="Vous êtes :" options={status} onChange={handleChange} />
+                    <NumberInput name="Nombre" label="Nombre d'animaux à garder" placeholder="1, 5, 10 .." onChange={handleChange} />
                 </TwoWrapper>
                 <TwoWrapper>
-                    <SelectInput label="Le type d'animal concerné" placeholder="Choisissez ici" name="race" options={race} />
-                    <SelectInput label="Votre prestation choisie" placeholder="Choisissez ici" name="prestation" options={prestation} />
+                    <SelectInput name="Race" label="Le type d'animal concerné" placeholder="Choisissez ici" options={race} onChange={handleChange} />
+                    <SelectInput name="Prestation" label="Votre prestation choisie" placeholder="Choisissez ici" options={prestation} onChange={handleChange} />
                 </TwoWrapper>
                 <TwoWrapper>
-                <DateInput label="Date de début de garde" />
-                    <DateInput label="Date de fin de garde" />
+                    <DateInput name="Début" label="Date de début de garde" onChange={handleChange} />
+                    <DateInput name="Fin" label="Date de fin de garde" onChange={handleChange} />
                 </TwoWrapper>
                 <OneWrapper>
-                    <TextArea label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
+                    <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
                 </OneWrapper>
                 <ConfirmWrapper>
                     <Validate text="Demander mon devis" type="submit" />

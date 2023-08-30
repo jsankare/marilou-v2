@@ -17,11 +17,11 @@ const StyledInput = styled.input`
     font-size: 18px;
 `
 
-const Number = ({label, name, placeholder}) => {
+const Number = ({label, name, placeholder, onChange}) => {
     return (
         <Container>
             <StyledLabel  htmlFor={name} >{label}</StyledLabel>
-            <StyledInput type="number" id={name} name={name} placeholder={placeholder} min="1" max="500" />
+            <StyledInput onChange={onChange} type="number" id={name} name={name} placeholder={placeholder} min="1" max="500" />
         </Container>
     );
 };

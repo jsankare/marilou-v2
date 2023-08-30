@@ -19,11 +19,11 @@ const StyledArea = styled.textarea`
     height: fit-content;
 `
 
-const TextArea = ({label, name, placeholder}) => {
+const TextArea = ({label, name, placeholder, onChange}) => {
     return (
         <Container>
             <StyledLabel  htmlFor={name} >{label}</StyledLabel>
-            <StyledArea id={name} name={name} placeholder={placeholder} />
+            <StyledArea onChange={onChange} id={name} name={name} placeholder={placeholder} />
         </Container>
     );
 };

@@ -22,11 +22,11 @@ const StyledSelect = styled.select`
 
 const StyledOption = styled.option``
 
-const Select = ({label, name, placeholder, options}) => {
+const Select = ({label, name, placeholder, options, onChange}) => {
     return (
         <Container>
             <StyledLabel  htmlFor={name} >{label}</StyledLabel>
-            <StyledSelect type="select" id={name} name={name} placeholder={placeholder}>
+            <StyledSelect onChange={onChange} type="select" id={name} name={name} placeholder={placeholder}>
                 <StyledOption value=""> {placeholder} </StyledOption>
                 {options.map((option) => (
                     <StyledOption key={option.value}  value={option.value}>

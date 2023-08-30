@@ -8,20 +8,20 @@ import Validate from "../Inputs/Validate";
 import axios from 'axios';
 
 const fame = [
-    { value: "facebook", label: "Facebook" },
-    { value: "instagram", label: "Instagram" },
-    { value: "flyers", label: "Flyers" },
-    { value: "website", label: "Site Internet" },
-    { value: "hearsay", label: "Bouche à oreille" },
-    { value: "other", label: "Autre" },
+    { value: "Facebook", label: "Facebook" },
+    { value: "Instagram", label: "Instagram" },
+    { value: "Flyers", label: "Flyers" },
+    { value: "Site Internet", label: "Site Internet" },
+    { value: "Bouche à oreille", label: "Bouche à oreille" },
+    { value: "Autre", label: "Autre" },
   ];
 
 const reason = [
-    { value: "information", label: "Demande d'information" },
-    { value: "estimate", label: "Demander un devis" },
-    { value: "feedback", label: "Laisser un avis" },
-    { value: "issue", label: "Problème sur le site" },
-    { value: "other", label: "Autre (précisez dans le message)" },
+    { value: "Demande d'information", label: "Demande d'information" },
+    { value: "Demande de devis", label: "Demander un devis" },
+    { value: "Laisser un avis", label: "Laisser un avis" },
+    { value: "Problème sur le site", label: "Problème sur le site" },
+    { value: "Autre", label: "Autre (précisez dans le message)" },
 ];
 
 const Container = styled.section`
@@ -115,7 +115,8 @@ const ContactForm = () => {
 
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 
-    const handleChange = (name, value) => {
+    const handleChange = (event) => {
+        const {name, value} = event.target
         setFormData(prevData => ({
             ...prevData,
             [name]: value
@@ -123,16 +124,16 @@ const ContactForm = () => {
     };
 
     const [formData, setFormData] = useState({
-        prenom: "",
-        lastName: "",
-        address: "",
-        city: "",
-        postalCode: "",
-        email: "",
-        phone: "",
-        reason: "",
-        fame: "",
-        message: ""
+        Prénom: "",
+        Nom: "",
+        Adresse: "",
+        Ville: "",
+        Zip: "",
+        Email: "",
+        Téléphone: "",
+        Raison: "",
+        Connaissance: "",
+        Message: ""
     });
 
     const handleSubmit = async (event) => {
@@ -154,25 +155,25 @@ const ContactForm = () => {
             </Heading>
             <FormWrapper onSubmit={handleSubmit}>
                 <TwoWrapper>
-                    <TextInput id="prenom" label="Prénom" placeholder="Martine" />
-                    <TextInput id="lastName" label="Nom" placeholder="Dupuis" />
+                    <TextInput name="Prénom" label="Prénom" placeholder="Martine" onChange={handleChange} />
+                    <TextInput name="Nom" label="Nom" placeholder="Dupuis" onChange={handleChange} />
                 </TwoWrapper>
                 <ThreeWrapper>
-                    <TextInput id="address" label="Adresse" placeholder="5 rue Montaigne" />
-                    <TextInput id="city" label="Ville" placeholder="Paris" />
-                    <TextInput id="zip" label="Code postal" placeholder="75015" />
+                    <TextInput name="Adresse" label="Adresse" placeholder="5 rue Montaigne" onChange={handleChange} />
+                    <TextInput name="Ville" label="Ville" placeholder="Paris" onChange={handleChange} />
+                    <TextInput name="Zip" label="Code postal" placeholder="75015" onChange={handleChange} />
                 </ThreeWrapper>
                 <TwoWrapper>
-                    <TextInput id="mail" label="Email" placeholder="exemple@mail.com" />
-                    <TextInput id="phone" label="Téléphone" placeholder="0611121314" />
+                    <TextInput name="Email" label="Email" placeholder="exemple@mail.com" onChange={handleChange} />
+                    <TextInput name="Téléphone" label="Téléphone" placeholder="0611121314" onChange={handleChange} />
                 </TwoWrapper>
                 <OneWrapper>
-                    <SelectInput id="reason" label="La raison de votre message" placeholder="Choisissez ici" name="reason" options={reason} />
-                    <RadioInput id="fame" label="Vous avez entendu parler de Marilou grâce à :" name="fame" options={fame} />
-                    <TextArea id="message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." />
+                    <SelectInput name="Raison" label="La raison de votre message" placeholder="Choisissez ici" options={reason} onChange={handleChange} />
+                    <RadioInput name="Connaissance" label="Vous avez entendu parler de Marilou grâce à :" options={fame} onChange={handleChange} />
+                    <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
                 </OneWrapper>
                 <ConfirmWrapper>
-                    <Validate id="confirm" text="Confirmer" type="submit" />
+                    <Validate text="Confirmer" type="submit" />
                 </ConfirmWrapper>
             </FormWrapper>
         </Container>

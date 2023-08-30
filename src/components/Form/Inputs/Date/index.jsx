@@ -17,11 +17,11 @@ const StyledInput = styled.input`
     font-size: 18px;
 `
 
-const Date = ({label, name}) => {
+const Date = ({label, name, onChange}) => {
     return (
         <Container>
             <StyledLabel  htmlFor={name} >{label}</StyledLabel>
-            <StyledInput type="date" id={name} name={name} />
+            <StyledInput onChange={onChange} type="date" id={name} name={name} />
         </Container>
     );
 };
