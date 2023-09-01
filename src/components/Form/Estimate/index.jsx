@@ -76,6 +76,15 @@ const TwoWrapper = styled.div`
         display: flex;
         flex-wrap: wrap;
     }
+    @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        max-width: 800px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 const ThreeWrapper = styled.div`
@@ -87,6 +96,15 @@ const ThreeWrapper = styled.div`
     @media (max-width: 1024px) {
         display: flex;
         flex-wrap: wrap;
+    }
+    @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        max-width: 800px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 `
 
@@ -117,7 +135,7 @@ const FormWrapper = styled.form`
     }
 `
 
-const ContactForm = () => {
+const EstimateForm = () => {
     
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 
@@ -151,7 +169,7 @@ const ContactForm = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post(`${backendUrl}/contact`, formData);
+            const response = await axios.post(`${backendUrl}/estimate`, formData);
             console.log("Form data sent:", response.data);
         } catch (error) {
             console.error('An error occurred:', error);
@@ -184,8 +202,8 @@ const ContactForm = () => {
                     <SelectInput name="Prestation" label="Votre prestation choisie" placeholder="Choisissez ici" options={prestation} onChange={handleChange} />
                 </TwoWrapper>
                 <TwoWrapper>
-                    <DateInput name="Début" label="Date de début de garde" onChange={handleChange} />
-                    <DateInput name="Fin" label="Date de fin de garde" onChange={handleChange} />
+                    <DateInput name="Début" label="Début de garde" onChange={handleChange} />
+                    <DateInput name="Fin" label="Fin de garde" onChange={handleChange} />
                 </TwoWrapper>
                 <OneWrapper>
                     <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
@@ -198,4 +216,4 @@ const ContactForm = () => {
     );
 };
 
-export default ContactForm;
+export default EstimateForm;

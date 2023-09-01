@@ -10,6 +10,7 @@ const Container = styled.div`
 
 const StyledLabel = styled.label`
     font-size: 18px;
+    width: 100%;
 `
 
 const StyledInput = styled.input`

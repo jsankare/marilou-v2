@@ -55,9 +55,6 @@ const OneWrapper = styled.div`
     width: 100%;
     justify-content: center;
     align-items: center;
-    @media (max-width: 375px) {
-        
-    }
 `
 
 const TwoWrapper = styled.div`
@@ -70,6 +67,15 @@ const TwoWrapper = styled.div`
         display: flex;
         flex-wrap: wrap;
     }
+    @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        max-width: 800px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 const ThreeWrapper = styled.div`
@@ -81,6 +87,15 @@ const ThreeWrapper = styled.div`
     @media (max-width: 1024px) {
         display: flex;
         flex-wrap: wrap;
+    }
+    @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        max-width: 800px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 `
 
@@ -173,7 +188,7 @@ const ContactForm = () => {
                     <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
                 </OneWrapper>
                 <ConfirmWrapper>
-                    <Validate text="Confirmer" type="submit" />
+                    <Validate text="Entrer en contact" type="submit" />
                 </ConfirmWrapper>
             </FormWrapper>
         </Container>

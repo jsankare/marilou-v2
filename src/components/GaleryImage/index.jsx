@@ -15,7 +15,7 @@ const StyledImage = styled.img`
 `
 
 const Caption = styled.p`
-    position: absolute;
+
     top: 10%;
     font-size: 20px;
 `
@@ -28,6 +28,7 @@ const Wrapper = styled.div`
     height: 200px;
     overflow: hidden;
     object-fit: contain;
+    border-radius: 5px;
 `
 
 const Delete = styled.button`
@@ -42,9 +43,9 @@ const Delete = styled.button`
 const GaleryImage = ({ image, caption, token, onDelete }) => {
     return (
         <Container>
+            <Caption>{caption}</Caption>
             <Wrapper>
                 <StyledImage src={image} />
-                <Caption>{caption}</Caption>
             </Wrapper>
             {
                 token && (

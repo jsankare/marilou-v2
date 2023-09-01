@@ -118,7 +118,7 @@ const Review = ({ reviews, onDelete, token }) => {
                 <FontAwesomeIcon icon={faChevronLeft} size='2x' />
                 </PreviousButton>
                 <TestimonialWrapper>
-                    <ReviewContent>&apos;{review.quote}&apos;</ReviewContent>
+                    <ReviewContent>	&quot;{review.quote}&quot;</ReviewContent>
                     <ReviewAuthor>- {review.name}</ReviewAuthor>
                 </TestimonialWrapper>
                 <NextButton
