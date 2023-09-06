@@ -8,6 +8,7 @@ import NumberInput from "../Inputs/Number";
 import TextArea from "../Inputs/TextArea";
 import Validate from "../Inputs/Validate";
 import axios from 'axios';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const status = [
     { value: "Entreprise", label: "Une entreprise" },
@@ -108,7 +109,17 @@ const ThreeWrapper = styled.div`
     }
 `
 
-const ConfirmWrapper = styled.div``
+const ConfirmWrapper = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 const Title = styled.h2`
     font-size: 30px;
@@ -138,6 +149,7 @@ const FormWrapper = styled.form`
 const EstimateForm = () => {
     
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
+    const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_KEY
 
     const [formData, setFormData] = useState({
         Prénom: "",
@@ -162,6 +174,12 @@ const EstimateForm = () => {
             ...prevData,
             [name]: value
         }));
+    };
+
+    const [recaptchaValue, setRecaptchaValue] = useState(null);
+
+    const handleRecaptchaChange = (value) => {
+        setRecaptchaValue(value);
     };
 
     const handleSubmit = async (event) => {
@@ -209,7 +227,11 @@ const EstimateForm = () => {
                     <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
                 </OneWrapper>
                 <ConfirmWrapper>
-                    <Validate text="Demander mon devis" type="submit" />
+                    <ReCAPTCHA
+                        sitekey={recaptchaKey}
+                        onChange={handleRecaptchaChange}
+                    />
+                    <Validate text="Demander un devis" type="submit" disabled={!recaptchaValue}/>
                 </ConfirmWrapper>
             </FormWrapper>
         </Container>

@@ -6,6 +6,7 @@ import RadioInput from "../Inputs/Radio";
 import TextArea from "../Inputs/TextArea"
 import Validate from "../Inputs/Validate";
 import axios from 'axios';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const fame = [
     { value: "Facebook", label: "Facebook" },
@@ -99,7 +100,17 @@ const ThreeWrapper = styled.div`
     }
 `
 
-const ConfirmWrapper = styled.div``
+const ConfirmWrapper = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 const Title = styled.h2`
     font-size: 30px;
@@ -129,6 +140,7 @@ const FormWrapper = styled.form`
 const ContactForm = () => {
 
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
+    const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_KEY
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -136,6 +148,12 @@ const ContactForm = () => {
             ...prevData,
             [name]: value
         }));
+    };
+
+    const [recaptchaValue, setRecaptchaValue] = useState(null);
+
+    const handleRecaptchaChange = (value) => {
+        setRecaptchaValue(value);
     };
 
     const [formData, setFormData] = useState({
@@ -188,7 +206,11 @@ const ContactForm = () => {
                     <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
                 </OneWrapper>
                 <ConfirmWrapper>
-                    <Validate text="Entrer en contact" type="submit" />
+                    <ReCAPTCHA
+                        sitekey={recaptchaKey}
+                        onChange={handleRecaptchaChange}
+                    />
+                    <Validate text="Entrer en contact" type="submit" disabled={!recaptchaValue}/>
                 </ConfirmWrapper>
             </FormWrapper>
         </Container>

@@ -7,6 +7,9 @@ const Container = styled.div`
     &&:hover{
         transform: scale(1.1);
     }
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 `
 
 const StyledLink = styled.button`
