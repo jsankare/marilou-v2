@@ -152,20 +152,20 @@ const EstimateForm = () => {
     const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_KEY
 
     const [formData, setFormData] = useState({
-        Prénom: "",
-        Nom: "",
-        Adresse: "",
-        Ville: "",
-        Zip: "",
-        Email: "",
-        Téléphone: "",
-        Statut: "",
-        Nombre: "",
-        Race: "",
-        Prestation: "",
-        Début: "",
-        Fin: "",
-        Message: ""
+        firstName: "",
+        lastName: "",
+        address: "",
+        city: "",
+        zip: "",
+        email: "",
+        phone: "",
+        status: "",
+        number: "",
+        race: "",
+        prestation: "",
+        startDate: "",
+        endDate: "",
+        message: ""
     });
 
     const handleChange = (event) => {
@@ -185,9 +185,9 @@ const EstimateForm = () => {
     const handleSubmit = async (event) => {
 
         event.preventDefault();
-
+        console.log(formData)
         try {
-            const response = await axios.post(`${backendUrl}/estimate`, formData);
+            const response = await axios.post(`${backendUrl}/estimate`, {...formData, recaptchaValue});
             console.log("Form data sent:", response.data);
         } catch (error) {
             console.error('An error occurred:', error);
@@ -201,30 +201,30 @@ const EstimateForm = () => {
             </Heading>
             <FormWrapper onSubmit={handleSubmit} >
                 <TwoWrapper>
-                    <TextInput name="Prénom" label="Prénom" placeholder="Martine" onChange={handleChange} />
-                    <TextInput name="Nom" label="Nom" placeholder="Dupuis" onChange={handleChange} />
+                    <TextInput name="firstName" label="Prénom" placeholder="Martine" onChange={handleChange} />
+                    <TextInput name="lastName" label="Nom" placeholder="Dupuis" onChange={handleChange} />
                 </TwoWrapper>
                 <ThreeWrapper>
-                    <TextInput name="Adresse" label="Adresse" placeholder="5 rue Montaigne" onChange={handleChange} />
-                    <TextInput name="Ville" label="Ville" placeholder="Paris" onChange={handleChange} />
-                    <TextInput name="Zip" label="Code postal" placeholder="75015" onChange={handleChange} />
+                    <TextInput name="address" label="Adresse" placeholder="5 rue Montaigne" onChange={handleChange} />
+                    <TextInput name="city" label="Ville" placeholder="Paris" onChange={handleChange} />
+                    <TextInput name="zip" label="Code postal" placeholder="75015" onChange={handleChange} />
                 </ThreeWrapper>
                 <TwoWrapper>
-                    <TextInput name="Email" label="Email" placeholder="exemple@mail.com" onChange={handleChange} />
-                    <TextInput name="Téléphone" label="Téléphone" placeholder="0611121314" onChange={handleChange} />
-                    <RadioInput name="Statut" label="Vous êtes :" options={status} onChange={handleChange} />
-                    <NumberInput name="Nombre" label="Nombre d'animaux à garder" placeholder="1, 5, 10 .." onChange={handleChange} />
+                    <TextInput name="email" label="Email" placeholder="exemple@mail.com" onChange={handleChange} />
+                    <TextInput name="phone" label="Téléphone" placeholder="0611121314" onChange={handleChange} />
+                    <RadioInput name="status" label="Vous êtes :" options={status} onChange={handleChange} />
+                    <NumberInput name="number" label="Nombre d'animaux à garder" placeholder="1, 5, 10 .." onChange={handleChange} />
                 </TwoWrapper>
                 <TwoWrapper>
-                    <SelectInput name="Race" label="Le type d'animal concerné" placeholder="Choisissez ici" options={race} onChange={handleChange} />
-                    <SelectInput name="Prestation" label="Votre prestation choisie" placeholder="Choisissez ici" options={prestation} onChange={handleChange} />
+                    <SelectInput name="race" label="Le type d'animal concerné" placeholder="Choisissez ici" options={race} onChange={handleChange} />
+                    <SelectInput name="prestation" label="Votre prestation choisie" placeholder="Choisissez ici" options={prestation} onChange={handleChange} />
                 </TwoWrapper>
                 <TwoWrapper>
-                    <DateInput name="Début" label="Début de garde" onChange={handleChange} />
-                    <DateInput name="Fin" label="Fin de garde" onChange={handleChange} />
+                    <DateInput name="startDate" label="Début de garde" onChange={handleChange} />
+                    <DateInput name="endDate" label="Fin de garde" onChange={handleChange} />
                 </TwoWrapper>
                 <OneWrapper>
-                    <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
+                    <TextArea name="message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
                 </OneWrapper>
                 <ConfirmWrapper>
                     <ReCAPTCHA

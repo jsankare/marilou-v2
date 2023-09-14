@@ -157,16 +157,16 @@ const ContactForm = () => {
     };
 
     const [formData, setFormData] = useState({
-        Prénom: "",
-        Nom: "",
-        Adresse: "",
-        Ville: "",
-        Zip: "",
-        Email: "",
-        Téléphone: "",
-        Raison: "",
-        Connaissance: "",
-        Message: ""
+        firstName: "",
+        lastName: "",
+        address: "",
+        city: "",
+        zip: "",
+        email: "",
+        phone: "",
+        reason: "",
+        fame: "",
+        message: "",
     });
 
     const handleSubmit = async (event) => {
@@ -174,7 +174,7 @@ const ContactForm = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post(`${backendUrl}/contact`, formData);
+            const response = await axios.post(`${backendUrl}/contact`, {...formData, recaptchaValue});
             console.log("Form data sent:", response.data);
         } catch (error) {
             console.error('An error occurred:', error);
@@ -188,22 +188,22 @@ const ContactForm = () => {
             </Heading>
             <FormWrapper onSubmit={handleSubmit}>
                 <TwoWrapper>
-                    <TextInput name="Prénom" label="Prénom" placeholder="Martine" onChange={handleChange} />
-                    <TextInput name="Nom" label="Nom" placeholder="Dupuis" onChange={handleChange} />
+                    <TextInput name="firstName" label="Prénom" placeholder="Martine" onChange={handleChange} />
+                    <TextInput name="lastName" label="Nom" placeholder="Dupuis" onChange={handleChange} />
                 </TwoWrapper>
                 <ThreeWrapper>
-                    <TextInput name="Adresse" label="Adresse" placeholder="5 rue Montaigne" onChange={handleChange} />
-                    <TextInput name="Ville" label="Ville" placeholder="Paris" onChange={handleChange} />
-                    <TextInput name="Zip" label="Code postal" placeholder="75015" onChange={handleChange} />
+                    <TextInput name="address" label="Adresse" placeholder="5 rue Montaigne" onChange={handleChange} />
+                    <TextInput name="city" label="Ville" placeholder="Paris" onChange={handleChange} />
+                    <TextInput name="zip" label="Code postal" placeholder="75015" onChange={handleChange} />
                 </ThreeWrapper>
                 <TwoWrapper>
-                    <TextInput name="Email" label="Email" placeholder="exemple@mail.com" onChange={handleChange} />
-                    <TextInput name="Téléphone" label="Téléphone" placeholder="0611121314" onChange={handleChange} />
+                    <TextInput name="email" label="Email" placeholder="exemple@mail.com" onChange={handleChange} />
+                    <TextInput name="phone" label="Téléphone" placeholder="0611121314" onChange={handleChange} />
                 </TwoWrapper>
                 <OneWrapper>
-                    <SelectInput name="Raison" label="La raison de votre message" placeholder="Choisissez ici" options={reason} onChange={handleChange} />
-                    <RadioInput name="Connaissance" label="Vous avez entendu parler de Marilou grâce à :" options={fame} onChange={handleChange} />
-                    <TextArea name="Message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
+                    <SelectInput name="reason" label="La raison de votre message" placeholder="Choisissez ici" options={reason} onChange={handleChange} />
+                    <RadioInput name="fame" label="Vous avez entendu parler de Marilou grâce à :" options={fame} onChange={handleChange} />
+                    <TextArea name="message" label="Votre message" placeholder="Vous pouvez écrire votre message ici .." onChange={handleChange} />
                 </OneWrapper>
                 <ConfirmWrapper>
                     <ReCAPTCHA

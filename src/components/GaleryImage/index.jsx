@@ -15,7 +15,6 @@ const StyledImage = styled.img`
 `
 
 const Caption = styled.p`
-
     top: 10%;
     font-size: 20px;
 `
