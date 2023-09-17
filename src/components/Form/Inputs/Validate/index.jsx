@@ -2,11 +2,6 @@ import React from "react";
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 100%;
-    transition: 0.2s ease-in-out;
-    &&:hover{
-        transform: scale(1.1);
-    }
     @media screen and (max-width: 768px) {
         text-align: center;
     }
