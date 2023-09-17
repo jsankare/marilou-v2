@@ -111,11 +111,10 @@ const ThreeWrapper = styled.div`
 
 const ConfirmWrapper = styled.div`
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     gap: 10px;
     align-items: center;
     @media screen and (max-width: 768px) {
-        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
