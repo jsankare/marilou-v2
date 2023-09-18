@@ -174,7 +174,6 @@ const ContactForm = () => {
 
         try {
             const response = await axios.post(`${backendUrl}/contact`, {...formData, recaptchaValue});
-            console.log("Form data sent:", response.data);
         } catch (error) {
             console.error('An error occurred:', error);
         }

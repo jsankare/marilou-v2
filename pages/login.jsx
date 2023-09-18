@@ -50,7 +50,6 @@ const Login = () => {
 
     const handleLogin = async (event) => {
         event.preventDefault();
-        console.log('totologin')
 
         try {
             const response = await axios.post(`${backendUrl}/login`, {
@@ -66,12 +65,10 @@ const Login = () => {
 
     const handleLogout = async (event) => {
         event.preventDefault();
-        console.log('totologout')
         try {
-            const response = await axios.post(`${backendUrl}/logout`);
-
-            console.log('Logout successful:', response.data);
+            localStorage.removeItem("authenticatedUser");
             setAuthenticated(false);
+            router.push('/');
         } catch (error) {
             console.error('Error during logout:', error);
         }
@@ -98,11 +95,8 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </Inputs>
-                {authenticated ? (
-                    <Validate onClick={handleLogout} text="Me déconnecter" />
-                ) : (
-                    <Validate onClick={handleLogin} text="Me connecter" />
-                )}
+                <Validate onClick={handleLogin} text="Me connecter" />
+                <Validate onClick={handleLogout} text="Me déconnecter" />
             </StyledForm>
             </Wrapper>
         </Container>

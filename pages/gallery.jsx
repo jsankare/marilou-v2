@@ -69,8 +69,7 @@ const Gallery = () => {
         
         try {
             const response = await axios.post(`${backendUrl}/images`, formData, {headers: {Authorization: `Bearer ${token}` }});
-            const data = {...response.data, image:`${backendUrl}/${response.data.image}`}
-            setImages([...images, data]);
+            setImages([...images, response.data]);
             setTitle('');
             setCaption('');
             setImageFile(null);
@@ -93,14 +92,13 @@ const Gallery = () => {
         if (token != null) {
             setToken(token)
         }
-        console.log(token)
     }, []);
 
     useEffect(() => {
         const fetchImages = async () => {
             try {
                 const response = await axios.get(`${backendUrl}/images`)
-                setImages(response.data.map(element => ({...element, image:`${backendUrl}/${element.image}`})));
+                setImages(response.data);
             }
             catch(error) {
                 console.error('Error fetching images:', error);

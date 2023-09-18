@@ -184,10 +184,8 @@ const EstimateForm = () => {
     const handleSubmit = async (event) => {
 
         event.preventDefault();
-        console.log(formData)
         try {
             const response = await axios.post(`${backendUrl}/estimate`, {...formData, recaptchaValue});
-            console.log("Form data sent:", response.data);
         } catch (error) {
             console.error('An error occurred:', error);
         }
