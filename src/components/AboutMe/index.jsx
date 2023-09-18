@@ -51,16 +51,16 @@ const AboutMe = () => {
             <Content>
                 <Title>À Propos de Marilou</Title>
                 <Description>
-                    Marilou, auto entrepreneuse et passionnée d’animaux, j’ai voulu rallier passion et métier pour ne faire qu’un !
+                    Marilou, auto entrepreneuse et passionnée d&apos;animaux, j&apos;ai voulu rallier passion et métier pour ne faire qu&apos;un !
                     <br />
                     <br />
                     Je me déplace chez vous pour le plus grand confort de vos loulous !
                     <br />
                     <br />
-                    Spécialisé en remplacement d’élevage canin, je me déplace jusqu’à 500kms de mon domicile (situé en Seine et Marne), pour des remplacements, week-end d’expos etc.. 
+                    Spécialisé en remplacement d&apos;élevage canin, je me déplace jusqu&apos;à 500kms de mon domicile (situé en Seine et Marne), pour des remplacements, week-end d&apos;expos etc.. 
                     <br />
                     <br />
-                    Je possède l’ACACED , 3 ans d’expérience en refuge animalier et l'assurance RC Pro AXA
+                    Je possède l&apos;ACACED , 3 ans d&apos;expérience en refuge animalier et l'assurance RC Pro AXA
                 </Description>
             </Content>
         </Container>
