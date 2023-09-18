@@ -168,37 +168,30 @@ const Person = [
       variable: [
         {
             value: "1 - 10 animaux",
-            cost: "40€",
-        },
-        {
-            value: "11 -25 animaux",
             cost: "60€",
         },
         {
-            value: "26 - 40 animaux",
+            value: "11 -25 animaux",
             cost: "80€",
         },
         {
-            value: "41 - 55 animaux",
+            value: "26 - 50 animaux",
             cost: "100€",
         },
         {
-            value: "56 - 100 animaux",
-            cost: "115€",
-        },
-        {
-            value: "100+ animaux",
-            cost: "135€",
+            value: "50+ animaux",
+            cost: "130€",
         },
       ],
       features: [
-        `Alimenter et abreuver tous les animaux de l’élevage`,
+        `Alimentation et abreuvage tous les animaux de l’élevage`,
         `Administration de soins/médicaments si nécessaire`,
         `Nettoyage complet de la nursery `,
         `Nettoyage des box/chenils adultes complets intérieur/extérieur`,
         `Sortir les animaux hors de leur box (séparés ou ensemble)`,
         `Jeux et interactions avec chacun des chiens`,
         `Séance photos avec autorisation du propriétaire`,
+        `Supplément avec pension : 20€ / jour`,
       ],
     },
   ];

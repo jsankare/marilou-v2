@@ -50,7 +50,18 @@ const AboutMe = () => {
             <Picture src="/images/marilou.jpeg" />
             <Content>
                 <Title>À Propos de Marilou</Title>
-                <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</Description>
+                <Description>
+                    Marilou, auto entrepreneuse et passionnée d’animaux, j’ai voulu rallier passion et métier pour ne faire qu’un !
+                    <br />
+                    <br />
+                    Je me déplace chez vous pour le plus grand confort de vos loulous !
+                    <br />
+                    <br />
+                    Spécialisé en remplacement d’élevage canin, je me déplace jusqu’à 500kms de mon domicile (situé en Seine et Marne), pour des remplacements, week-end d’expos etc.. 
+                    <br />
+                    <br />
+                    Je possède l’ACACED , 3 ans d’expérience en refuge animalier et l'assurance RC Pro AXA
+                </Description>
             </Content>
         </Container>
     );
