@@ -60,7 +60,7 @@ const AboutMe = () => {
                     Spécialisé en remplacement d&apos;élevage canin, je me déplace jusqu&apos;à 500kms de mon domicile (situé en Seine et Marne), pour des remplacements, week-end d&apos;expos etc.. 
                     <br />
                     <br />
-                    Je possède l&apos;ACACED , 3 ans d&apos;expérience en refuge animalier et l'assurance RC Pro AXA
+                    Je possède l&apos;ACACED , 3 ans d&apos;expérience en refuge animalier et l&apos;assurance RC Pro AXA
                 </Description>
             </Content>
         </Container>
