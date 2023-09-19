@@ -96,7 +96,7 @@ const Login = () => {
                     />
                 </Inputs>
                 <Validate type="submit" text="Me connecter" />
-                <Validate onClick={handleLogout} text="Me déconnecter" />
+                <Validate type="button" onClick={handleLogout} text="Me déconnecter" />
             </StyledForm>
             </Wrapper>
         </Container>
