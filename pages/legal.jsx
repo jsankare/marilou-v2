@@ -37,12 +37,12 @@ const TermsOfService = () => {
                     content="L’édition et la direction de la publication du site https://marilou-pet-sitting.fr/ est assurée par BATY Marilou , domicilié 23 rue de villaré 77730 Citry.
                     Numéro de téléphone est 0674802188
                     Adresse e-mail Mariloubaty@outlook.fr.
-                    L'hébergeur du site https://marilou-pet-sitting.fr/ est la société Github , dont le siège social est situé au 88 COLIN P. KELLY JR ST CA 94107 99404 SAN FRANCISCO, avec le numéro de téléphone : _____________." 
+                    L'hébergeur du site https://marilou-pet-sitting.fr/ est la société Github , dont le siège social est situé au 88 COLIN P. KELLY JR ST CA 94107 99404 SAN FRANCISCO." 
                 />
                 <Conditions title="Article 2 : Accès au site" 
                     content="Le site https://marilou-pet-sitting.fr/ permet à l'Utilisateur un accès gratuit aux services suivants :
                     Le site internet propose les services suivants :
-                    _____________
+                    Informations, contact.
                     Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. Tous les frais supportés par l'Utilisateur pour accéder au service (matériel informatique, logiciels, connexion Internet, etc.) sont à sa charge." 
                 />
                 <Conditions title="Article 3 : Collecte des données" 
@@ -75,7 +75,7 @@ const TermsOfService = () => {
                     content="La législation française s'applique au présent contrat. En cas d'absence de résolution amiable d'un litige né entre les parties, les tribunaux français seront seuls compétents pour en connaître.
                     Pour toute question relative à l’application des présentes CGU, vous pouvez joindre l’éditeur aux coordonnées inscrites à l’ARTICLE 1."
                 />
-                <DateOfEffect>Mise à jour le 04/07/2023</DateOfEffect>        
+                <DateOfEffect>Mise à jour le 19/09/2023</DateOfEffect>        
             </Wrapper>
         </Container>
     );
