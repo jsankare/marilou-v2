@@ -186,7 +186,7 @@ const Person = [
       features: [
         `Alimentation et abreuvage tous les animaux de l’élevage`,
         `Administration de soins/médicaments si nécessaire`,
-        `Nettoyage complet de la nursery `,
+        `Nettoyage complet de la nurserie `,
         `Nettoyage des box/chenils adultes complets intérieur/extérieur`,
         `Sortir les animaux hors de leur box (séparés ou ensemble)`,
         `Jeux et interactions avec chacun des chiens`,

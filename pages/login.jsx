@@ -95,7 +95,7 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </Inputs>
-                <Validate onClick={handleLogin} text="Me connecter" />
+                <Validate type="submit" text="Me connecter" />
                 <Validate onClick={handleLogout} text="Me déconnecter" />
             </StyledForm>
             </Wrapper>

@@ -7,7 +7,7 @@ const Container = styled.div`
     }
 `
 
-const StyledLink = styled.button`
+const StyledButton = styled.button`
     padding: 15px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -16,10 +16,10 @@ const StyledLink = styled.button`
     font-weight: 800;
 `
 
-const Validate = ({text}) => {
+const Validate = ({text, onClick, type}) => {
     return (
         <Container>
-            <StyledLink> {text} </StyledLink>
+            <StyledButton type={type} onClick={onClick}> {text} </StyledButton>
         </Container>
     );
 };
