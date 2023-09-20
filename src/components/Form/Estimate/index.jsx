@@ -232,7 +232,7 @@ const EstimateForm = () => {
 
         event.preventDefault();
         try {
-            // const response = await axios.post(`${backendUrl}/estimate`, {...formData, recaptchaValue});
+            const response = await axios.post(`${backendUrl}/estimate`, {...formData, recaptchaValue});
             alert("Votre message a bien été envoyé");
             setFormData({
                 firstName: "",
