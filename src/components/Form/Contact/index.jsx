@@ -174,6 +174,20 @@ const ContactForm = () => {
 
         try {
             const response = await axios.post(`${backendUrl}/contact`, {...formData, recaptchaValue});
+            alert("Votre message a bien été envoyé");
+            setFormData({
+                firstName: "",
+                lastName: "",
+                address: "",
+                city: "",
+                zip: "",
+                email: "",
+                phone: "",
+                reason: "",
+                fame: "",
+                message: "",
+            });
+            setRecaptchaValue(null);
         } catch (error) {
             console.error('An error occurred:', error);
         }

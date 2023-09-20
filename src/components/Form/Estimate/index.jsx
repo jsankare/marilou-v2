@@ -34,6 +34,11 @@ const prestation = [
     { value: "Forfait(s) - 1 mois", label: "Forfait(s) - 1 mois" },
 ]
 
+const textRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ -']+$/; // Regex for names (letters, spaces, hyphens, and apostrophes)
+const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/; // Regex for email addresses
+const phoneRegex = /^\d{10}$/; // Regex for 10-digit phone numbers
+const zipRegex = /^\d{5}$/; // Regex for 5-digit zip code
+
 const Container = styled.section`
     display: flex;
     flex-direction: column;
@@ -183,9 +188,70 @@ const EstimateForm = () => {
 
     const handleSubmit = async (event) => {
 
+        if (!textRegex.test(formData.firstName)) {
+            alert("Prénom non valide");
+            event.preventDefault();
+            return;
+        }
+    
+        if (!textRegex.test(formData.lastName)) {
+            alert("Nom non valide");
+            event.preventDefault();
+            return;
+        }
+
+        if (!textRegex.test(formData.city)) {
+            alert("Ville non valide");
+            event.preventDefault();
+            return;
+        }
+    
+        if (!emailRegex.test(formData.email)) {
+            alert("Adresse email invalide");
+            event.preventDefault();
+            return;
+        }
+    
+        if (!phoneRegex.test(formData.phone)) {
+            alert("Numéro de téléphone non valide");
+            event.preventDefault();
+            return;
+        }
+
+        if (!zipRegex.test(formData.zip)) {
+            alert("Zip code non valide");
+            event.preventDefault();
+            return;
+        }
+
+        if (formData.status == "") {
+            alert("Merci de remplir un statut");
+            event.preventDefault();
+            return;
+        }
+
         event.preventDefault();
         try {
-            const response = await axios.post(`${backendUrl}/estimate`, {...formData, recaptchaValue});
+            // const response = await axios.post(`${backendUrl}/estimate`, {...formData, recaptchaValue});
+            alert("Votre message a bien été envoyé");
+            setFormData({
+                firstName: "",
+                lastName: "",
+                address: "",
+                city: "",
+                zip: "",
+                email: "",
+                phone: "",
+                status: "",
+                number: "",
+                race: "",
+                prestation: "",
+                startDate: "",
+                endDate: "",
+                message: ""
+            });
+            setRecaptchaValue(null);
+            console.log('toto')
         } catch (error) {
             console.error('An error occurred:', error);
         }
