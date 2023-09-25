@@ -51,7 +51,7 @@ export default function Custom404() {
     return (
         <Container>
             <Title>Woof !</Title>
-            <Subtitle>La page que vous cherchez n'existe pas, cliquez <StyledLink href="/">ici</StyledLink></Subtitle>
+            <Subtitle>La page que vous cherchez n&apos;existe pas, cliquez <StyledLink href="/">ici</StyledLink></Subtitle>
             <Picture src="/images/404_pic.svg" />
         </Container>
         )
