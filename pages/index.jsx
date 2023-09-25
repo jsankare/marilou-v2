@@ -32,7 +32,7 @@ const Home = () => {
         <Wrapper>
             <Head>
                 <title>Marilou</title>
-                <meta name="description" content="Marilou, service de pet-sitting, se propose pour prendre soin et garder, promener et/ou soigner vos chiens. Entrepreneuse qualifiée et passionnée, Marilou saura écouter et adapter sa prestation à vos besoins et ceux de vos animaux de compagnie." />
+                <meta name="description" content="Marilou, service de pet-sitting situé en seine-et-marne, se propose pour prendre soin et garder, promener et/ou soigner vos chiens. Proche de La Ferté-sous-jouarre, Citry et Château-thierry. Entrepreneuse qualifiée et passionnée, Marilou saura écouter et adapter sa prestation à vos besoins et ceux de vos animaux de compagnie." />
             </Head>
             <Hero />
             <PagePadding>
