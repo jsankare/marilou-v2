@@ -27,6 +27,7 @@ jobs:
     env:
       NEXT_PUBLIC_BACKEND_URL: ${{secrets.BACKEND_URL}}
       NEXT_PUBLIC_RECAPTCHA_KEY: ${{secrets.RECAPTCHA_KEY}}
+      NEXT_PUBLIC_GOOGLE_PUBLIC_ANALYTICS: ${{secrets.GOOGLE_ANALYTICS}}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
