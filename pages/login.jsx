@@ -76,7 +76,7 @@ const Login = () => {
 
     return (
         <Container>
-            <Header image="/images/login_hero.jpg" title="Se connecter" subtitle="Cette page est réservée à l'administratrice du site" author="J.Sankare" />
+            <Header image="/images/login_hero.webp" title="Se connecter" subtitle="Cette page est réservée à l'administratrice du site" author="J.Sankare" />
             <Wrapper>
                 <Title>Connexion</Title>
                 <StyledForm onSubmit={handleLogin}>

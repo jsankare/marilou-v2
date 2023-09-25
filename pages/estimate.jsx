@@ -19,7 +19,7 @@ const Values = () => {
                 <title>Marilou - Devis</title>
                 <meta name="description" content="Vous pouvez ici demander un devis pour effectuer une garde ou une promenade pour votre animal. Marilou pet-sitting répondra le plus vite possible." />
             </Head>
-            <Header image="/images/dog_mockup.jpg" title="Demander un devis" subtitle="La communication est un art qui implique d'écouter autant que de parler." author="Epictète" />
+            <Header image="/images/dog_mockup.webp" title="Demander un devis" subtitle="La communication est un art qui implique d'écouter autant que de parler." author="Epictète" />
             <EstimateForm />
         </Container>
     );

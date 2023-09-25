@@ -5,13 +5,13 @@ import PitchCard from "./PitchCard";
 const data = [
     {
         id: 'FJZK',
-        image: '/images/pitch_icon2.png',
+        image: '/images/pitch_icon2.webp',
         title: 'Les interactions sociales',
         subtitle: `Votre compagnon a besoin d'interagir avec d'autres êtres vivants pour son épanouissement. Des rencontres enrichissantes lui offriront une vie sociale équilibrée, favorisant son bonheur et sa sociabilité.`
     },
     {
         id: 'FK2I',
-        image: '/images/pitch_icon5.png',
+        image: '/images/pitch_icon5.webp',
         title: 'Exercice physique et stimulation mentale',
         subtitle: ` Votre compagnon a besoin d'exercice et de stimulation mentale réguliers pour rester en forme et éveillé. Nous proposons des activités ludiques et des jeux interactifs qui répondent à ses besoins vitaux, stimulant son corps et son esprit.`
     },
@@ -23,19 +23,19 @@ const data = [
     },
     {
         id: 'L42U',
-        image: '/images/pitch_icon4.png',
+        image: '/images/pitch_icon4.webp',
         title: 'Réduction du stress',
         subtitle: `La tranquillité d'esprit de votre compagnon est essentielle. Nos services offrent un environnement serein, des techniques apaisantes et une présence rassurante, permettant de réduire son stress, favorisant ainsi son équilibre émotionnel et son bien-être global.`
     },
     {
         id: 'Z92K',
-        image: '/images/pitch_icon6.png',
+        image: '/images/pitch_icon6.webp',
         title: 'Sécurité et prévention des accidents',
         subtitle: `La sécurité de votre compagnon est notre priorité. Grâce à nous, vous pouvez avoir l'assurance d'une surveillance attentive, de mesures de prévention des accidents et d'une gestion proactive des risques, garantissant ainsi sa sécurité à tout moment.`
     },
     {
         id: '2K45',
-        image: '/images/pitch_icon3.png',
+        image: '/images/pitch_icon3.webp',
         title: 'Routine et familiarité',
         subtitle: `Votre compagnon a besoin d'une routine stable pour se sentir en sécurité et équilibré. Nous pouvons maintenir une routine cohérente, offrant ainsi à votre animal un environnement fiable et stable, favorisant son confort et sa stabilité émotionnelle.`
     },

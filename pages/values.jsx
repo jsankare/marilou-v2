@@ -19,7 +19,7 @@ const Values = () => {
                 <title>Marilou - Nos valeurs</title>
                 <meta name="description" content="Marilou a des valeurs très fortes en ce qui concerne le bien être animal, la bonne santé des animaux dont elle s'occupe est primordiale. Lors des gardes ou des promenades, Marilou pet sitting s'efforce de produire des prestations de qualité pour ravir les propriétaires et les animaux." />
             </Head>
-            <Header image="/images/dogs_with_toy.jpg" title="Nos valeurs" subtitle="La grandeur d'une nation et son progrès moral peuvent être jugés par la manière dont elle traite ses animaux." author="Mahatma Gandhi" />
+            <Header image="/images/dogs_with_toy.webp" title="Nos valeurs" subtitle="La grandeur d'une nation et son progrès moral peuvent être jugés par la manière dont elle traite ses animaux." author="Mahatma Gandhi" />
             <Pitch />
             <Articles />
         </Container>

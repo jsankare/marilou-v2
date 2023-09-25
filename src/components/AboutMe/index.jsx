@@ -47,7 +47,7 @@ const Description = styled.p``
 const AboutMe = () => {
     return (
         <Container>
-            <Picture src="/images/marilou.jpeg" />
+            <Picture src="/images/marilou.webp" />
             <Content>
                 <Title>À Propos de Marilou</Title>
                 <Description>

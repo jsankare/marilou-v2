@@ -239,7 +239,7 @@ const Prestations = () => {
                 <title>Marilou - Prestations</title>
                 <meta name="description" content="Chez Marilou, de nombreuses prestations de qualité à prix compétitif sont disponibles. Garde, promenade, forfaits, tout est possible, pour particuliers, entreprises ou élevages." />
             </Head>
-            <Header image="/images/prestationsbackground.jpg" title="Prestations" subtitle="La plus petite des bonnes actions envers un animal est un pas vers la construction d'un monde meilleur." author="Richard Carlson" />
+            <Header image="/images/prestationsbackground.webp" title="Prestations" subtitle="La plus petite des bonnes actions envers un animal est un pas vers la construction d'un monde meilleur." author="Richard Carlson" />
             <Wrapper>
                 <Individuals>
                     <PackLogic packsData={Person} title="Particuliers" />

@@ -91,14 +91,13 @@ const Footer = () => {
                     <StyledLink href="/gallery" >Galerie</StyledLink>
                     <StyledLink href="/estimate" >Devis</StyledLink>
                     <StyledLink href="/#contact" >Contact</StyledLink>
-                    {/* <StyledLink href="/login">Connexion</StyledLink> */}
                     <StyledLink href="/legal" >Conditions d&apos;utilisation</StyledLink>
                 </Sitemap>
                 <Socials>
-                    <StyledLink href="tel:0674802188" ><Icon src="/images/phone.png" /></StyledLink>
-                    <StyledLink href="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" /></StyledLink>
-                    <StyledLink href="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" /></StyledLink>
-                    <StyledLink href="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" /></StyledLink>
+                    <StyledLink href="tel:0674802188" ><Icon src="/images/phone.png" alt="phone icon" /></StyledLink>
+                    <StyledLink href="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" alt="mail icon" /></StyledLink>
+                    <StyledLink href="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" alt="instagram" /></StyledLink>
+                    <StyledLink href="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" alt="facebook" /></StyledLink>
                 </Socials>
             </Content>
             <Dividor />

@@ -32,7 +32,7 @@ const TermsOfService = () => {
             <title>Marilou - Legal</title>
             <meta name="description" content="Chez Marilou, nous prenons soin de fournir des informations claires sur nos services et notre entreprise de pet-sitting." />
             </Head>
-            <Header image="/images/dog_legal.jpg" title="Conditions d'utilisation" subtitle="Ce que l'on conçoit bien s'énonce clairement, Et les mots pour le dire arrivent aisément." author="Nicolas Boileau" />
+            <Header image="/images/dog_legal.webp" title="Conditions d'utilisation" subtitle="Ce que l'on conçoit bien s'énonce clairement, Et les mots pour le dire arrivent aisément." author="Nicolas Boileau" />
             <Wrapper>
                 <Conditions title="Article 1 : Mentions légales" 
                     content="L’édition et la direction de la publication du site https://marilou-pet-sitting.fr/ est assurée par BATY Marilou , domicilié 23 rue de villaré 77730 Citry.
