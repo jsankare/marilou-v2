@@ -30,6 +30,7 @@ const TermsOfService = () => {
         <Container>
             <Head>
             <title>Marilou - Legal</title>
+            <meta name="description" content="Chez Marilou, nous prenons soin de fournir des informations claires sur nos services et notre entreprise de pet-sitting." />
             </Head>
             <Header image="/images/dog_legal.jpg" title="Conditions d'utilisation" subtitle="Ce que l'on conçoit bien s'énonce clairement, Et les mots pour le dire arrivent aisément." author="Nicolas Boileau" />
             <Wrapper>

@@ -111,6 +111,7 @@ const Gallery = () => {
         <Container>
             <Head>
             <title>Marilou - Galerie</title>
+            <meta name="description" content="Retrouvez ici les photos des chiens gardés par Marilou lors des gardes ou lors des promenades." />
             </Head>
             <Header image="/images/dog_sunset.jpg" title="Galerie" subtitle="La photographie est un arrêt du cœur d'une fraction de seconde." author="Pierre Movila" />
             {
