@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     gap: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    min-height: 50vh;
 `
 
 const Form = styled.form`
@@ -105,7 +106,7 @@ const Gallery = () => {
             };
         }
         fetchImages();
-    }, []);
+    }, [backendUrl]);
 
     return (
         <Container>
