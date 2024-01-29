@@ -72,7 +72,6 @@ const Menu = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-    transition: 0.5s;
     text-decoration: none;
     color: black;
     margin: 0 5px;
@@ -85,7 +84,6 @@ const StyledLink = styled(Link)`
 `;
 
 const PrimalStyledLink = styled(Link)`
-    transition: 0.5s;
     text-decoration: none;
     color: black;
     margin: 0 5px;

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import styled from 'styled-components';
+import colors from "../../colors";
 
 const Container = styled.section`
     width: 100%;
@@ -65,6 +66,15 @@ const Maker = styled.p`
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: black;
+    transition: 0.2s ease-in-out;
+    &:hover {
+        color: ${colors.corporateGreen};
+    }
+`
+
+const StyledIcon = styled(Link)`
+    text-decoration: none;
+    color: black;
 `
 
 const Dividor = styled.div`
@@ -83,7 +93,7 @@ const Footer = () => {
     return (
         <Container>
             <Content>
-                <StyledLink href="/" ><Logo src="/images/logo.png" /></StyledLink>
+                <StyledLink href="/" ><Logo src="/images/marilou-logo-cropped.png" /></StyledLink>
                 <Sitemap>
                     <StyledLink href="/" >Accueil</StyledLink>
                     <StyledLink href="/prestations" >Prestations</StyledLink>
@@ -94,10 +104,10 @@ const Footer = () => {
                     <StyledLink href="/legal" >Conditions d&apos;utilisation</StyledLink>
                 </Sitemap>
                 <Socials>
-                    <StyledLink href="tel:0674802188" ><Icon src="/images/phone.png" alt="phone icon" /></StyledLink>
-                    <StyledLink href="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" alt="mail icon" /></StyledLink>
-                    <StyledLink href="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" alt="instagram" /></StyledLink>
-                    <StyledLink href="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" alt="facebook" /></StyledLink>
+                    <StyledIcon href="tel:0674802188" ><Icon src="/images/phone.png" alt="phone icon" /></StyledIcon>
+                    <StyledIcon href="mailto:Mariloubaty@outlook.fr" ><Icon src="/images/mail.png" alt="mail icon" /></StyledIcon>
+                    <StyledIcon href="https://www.facebook.com/profile.php?id=100090481339100&mibextid=LQQJ4d" target="blank" ><Icon src="/images/facebook.png" alt="facebook" /></StyledIcon>
+                    <StyledIcon href="https://www.instagram.com/marilou_pet_sitting/" target="blank" ><Icon src="/images/instagram.png" alt="instagram" /></StyledIcon>
                 </Socials>
             </Content>
             <Dividor />
